@@ -2,6 +2,7 @@
 
 c++ warning correspondence table (Clang/GCC and Visual Studio)
 
+## VS C4000-C4199
 
 |Summary|Visual Studio|GCC|Clang|Clang message|
 |:---|:--:|:--:|:--:|:--|
@@ -27,5 +28,22 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |declared formal parameter list different from definition|[/W1 C4029](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4029?view=vs-2019)|||
 |first formal parameter list longer than the second list|[/W1 C4030](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4030?view=vs-2019)|||
 |second formal parameter list longer than the first list|[/W1 C4031](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4031?view=vs-2019)|||
+|formal parameter 'number' has different type when promoted|[/W4 C4032](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-4-c4032?view=vs-2019)|-|-||
+|'function' must return a value|[/W1 C4033](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4033?view=vs-2019)|error|[error](https://wandbox.org/permlink/18liO7Ylnhpypszb)|non-void function 'test_1' should return a value|
+|sizeof returns 0|[/W1 C4034](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4034?view=vs-2019)|||
+|unnamed 'type' as actual parameter|[/W1 C4036](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4036?view=vs-2019)|-|-||
+|'modifier' : illegal ambient class modifier|[/W1 C4038](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4038?view=vs-2019)|-|-||
+|compiler limit : terminating browser output|[/W1 C4041](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4041?view=vs-2019)|-|-||
+
+## VS C4200-C4399
+
+|Summary|Visual Studio|GCC|Clang|Clang message|
+|:---|:--:|:--:|:--:|:--|
+|nonstandard extension used : zero-sized array in struct/union|[/W2,4 C4200](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-levels-2-and-4-c4200?view=vs-2019)||
+
+## no VS
+
+|Summary|Visual Studio|GCC|Clang|Clang message|
+|:---|:--:|:--:|:--:|:--|
 |int x = NULL;|-|[-Wconversion-null](https://wandbox.org/permlink/CKYlII9m0sW7PpOv)|[-Wnull-conversion](https://wandbox.org/permlink/ABZSxzM9XR0r1a4B)|implicit conversion of NULL constant to '_TYPE_'|
 |if .. else ..|-|[-Wdangling-else](https://wandbox.org/permlink/2dYFvxgWxBJSRdwN)|[-Wdangling-else](https://wandbox.org/permlink/GroeDOmm6CQWjxVV)|add explicit braces to avoid dangling else|
