@@ -37,8 +37,8 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 
 ## VS C4200-C4399
 
-|Summary|Visual Studio|GCC|Clang|Clang message|
-|:---|:--:|:--:|:--:|:--|
+|Summary|Visual Studio|GCC|Clang|Clang message|is Same|
+|:---|:--:|:--:|:--:|:--|:--|
 |nonstandard extension used : zero-sized array in struct/union|[/W2,4 C4200](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-levels-2-and-4-c4200?view=vs-2019)|[-Wpedantic](https://wandbox.org/permlink/hxVlDP6TC49qj0P1)|[-pedantic (-Wzero-length-array)](https://wandbox.org/permlink/dCOhebgvxxv9adE5)|zero size arrays are an extension|:ballot_box_with_check:|
 |nonstandard extension used : nameless struct/union|[/W4 C4201](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-4-c4201?view=vs-2019)|[-Wpedantic](https://wandbox.org/permlink/hxVlDP6TC49qj0P1#wandbox-resultwindow-code-body-9)|[-pedantic (-Wgnu-anonymous-struct)](https://wandbox.org/permlink/SlT2dcwmnJRE8eKo)|anonymous structs are a GNU extension|:ballot_box_with_check:|
 |nonstandard extension used : '...': prototype parameter in name list illegal|[/W4 C4202](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-4-c4202?view=vs-2019)|error|[error](https://wandbox.org/permlink/69GUyNXqErEAuIvh)||
@@ -56,14 +56,14 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 
 ## VS C4400-C4599
 
-|Summary|Visual Studio|GCC|Clang|Clang message|
-|:---|:--:|:--:|:--:|:--|
+|Summary|Visual Studio|GCC|Clang|Clang message|is Same|
+|:---|:--:|:--:|:--:|:--|:--|
 |'type' : const/volatile qualifiers on this type are not supported|[/W4 C4400](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-4-c4400?view=vs-2019)|||
 
 ## VS C4600-C4799
 
-|Summary|Visual Studio|GCC|Clang|Clang message|
-|:---|:--:|:--:|:--:|:--|
+|Summary|Visual Studio|GCC|Clang|Clang message|is Same|
+|:---|:--:|:--:|:--:|:--|:--|
 |#pragma 'macro name' : expected a valid non-empty string|[/W1 C4600](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4600?view=vs-2019)|ok|[ok](https://wandbox.org/permlink/SRW40qjGweai7rqm)||
 |#pragma pop_macro : 'macro name' no previous #pragma push_macro for this identifier|[/W1 C4602](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4602?view=vs-2019)|[ok](https://wandbox.org/permlink/gC77rsnxWZtRIlfv)|[-Wignored-pragmas](https://wandbox.org/permlink/nRpbm8fZSYJU1QqP)| pragma pop_macro could not pop '_x_', no matching push_macro|
 |'identifier' : macro is not defined or definition is different after precompiled header use|[/W1 C4603](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4603?view=vs-2019)||||
@@ -79,7 +79,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 
 ## no VS
 
-|Summary|Visual Studio|GCC|Clang|Clang message|
-|:---|:--:|:--:|:--:|:--|
+|Summary|Visual Studio|GCC|Clang|Clang message|is Same|
+|:---|:--:|:--:|:--:|:--|:--|
 |int x = NULL;|-|[-Wconversion-null](https://wandbox.org/permlink/CKYlII9m0sW7PpOv)|[-Wnull-conversion](https://wandbox.org/permlink/ABZSxzM9XR0r1a4B)|implicit conversion of NULL constant to '_TYPE_'|
 |if .. else ..|-|[-Wdangling-else](https://wandbox.org/permlink/2dYFvxgWxBJSRdwN)|[-Wdangling-else](https://wandbox.org/permlink/GroeDOmm6CQWjxVV)|add explicit braces to avoid dangling else|
