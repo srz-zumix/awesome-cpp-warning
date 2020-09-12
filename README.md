@@ -8,7 +8,4 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 
 ## Table
 
-|GCC Group|GCC Warn|Clang Group|Clang Warn|VC Group|VC Warn|
-|:-------:|:------:|:---------:|:--------:|:------:|:-----:|
-||-Wdiv-by-zero||-Wdivision-by-zero|/W3|C4723, C4274|
-
+[TABLE](./TABLE.rst)
