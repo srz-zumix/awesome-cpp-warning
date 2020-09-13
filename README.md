@@ -10,23 +10,24 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 
 |GCC Group|GCC Warn|Clang Group|Clang Warn|VC Group|VC Warn|
 |:-------:|:------:|:---------:|:--------:|:------:|:-----:|
-|   | warning                |           | [-Wmacro-redefined][]            | /W1   | C4005 |
-|   | -Wcomment              |           | [-Wcomment][]                    | /W1   | C4010 |
-|   | -Wsign-compare         |           | [-Wsign-compare][]               | /W3   | C4018 |
-|   |                        |           | [-Wextra-semi-stmt][]            | /W4   | C4019 |
-|   | -Wpedantic             | -pedantic | [-Wzero-length-array][]          | /W2,4 | C4200 |
-|   | -Wpedantic             | -pedantic | [-Wgnu-anonymous-struct][]       | /W4   | C4201 |
-| - | -Wundef                | -         | [-Wundef][]                      | /W4   | C4668 |
-|   | -Wuninitialized        |           | [-Wuninitialized][]              | /W1,4 | C4700 |
-|   |                        |           | [-Wsometimes-uninitialized][]    | /W4   | C4701, C4703 |
-| - | -Wunreachable-code     | -         | [-Wunreachable-code][]           | /W4   | C4702 |
-|   | -Wparentheses          |           | [-Wparentheses][]                | /W4   | C4706 |
-|   | [-Wcomma-subscript][]  |           | [-Wdeprecated-comma-subscript][] | /W4   | C4709 |
-|   | -Wreturn-type          |           | [-Wreturn-type][]                | /W1   | C4715, C4716 |
-|   |                        |           | [-Winfinite-recursion][]         | /W1   | C4717 |
-|   | -Wdiv-by-zero          |           | [-Wdivision-by-zero][]           | /W3   | C4723, C4274 |
-|   | -Wconversion-null      |           | [-Wnull-conversion][]            | | |
-|   | -Wdangling-else        |           | [-Wdangling-else][]              | | |
+|           | warning                |           | [-Wmacro-redefined][]            | /W1   | C4005 |
+|           | -Wcomment              |           | [-Wcomment][]                    | /W1   | C4010 |
+|           | -Wsign-compare         |           | [-Wsign-compare][]               | /W3   | C4018 |
+|           |                        |           | [-Wextra-semi-stmt][]            | /W4   | C4019 |
+| -pedantic | -Wpedantic             | -pedantic | [-Wzero-length-array][]          | /W2,4 | C4200 |
+| -pedantic | -Wpedantic             | -pedantic | [-Wgnu-anonymous-struct][]       | /W4   | C4201 |
+| -         | -Wundef                | -         | [-Wundef][]                      | /W4   | C4668 |
+|           | -Wuninitialized        |           | [-Wuninitialized][]              | /W1,4 | C4700 |
+|           |                        |           | [-Wsometimes-uninitialized][]    | /W4   | C4701, C4703 |
+| -         | -Wunreachable-code     | -         | [-Wunreachable-code][]           | /W4   | C4702 |
+|           | -Wparentheses          |           | [-Wparentheses][]                | /W4   | C4706 |
+|           | [-Wcomma-subscript][]  |           | [-Wdeprecated-comma-subscript][] | /W4   | C4709 |
+|           | -Wreturn-type          |           | [-Wreturn-type][]                | /W1   | C4715, C4716 |
+|           |                        |           | [-Winfinite-recursion][]         | /W1   | C4717 |
+|           | -Wdiv-by-zero          |           | [-Wdivision-by-zero][]           | /W3   | C4723, C4274 |
+|           |                        |           | [-Wfortify-source][]             | /W1   | C4789 |
+|           | -Wconversion-null      |           | [-Wnull-conversion][]            | | |
+|           | -Wdangling-else        |           | [-Wdangling-else][]              | | |
 
 
 [-Wmacro-redefined]:https://wandbox.org/permlink/FeN9eryQ6AjJtPm1
@@ -45,5 +46,6 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 [-Wreturn-type]:https://wandbox.org/permlink/l8AKsXFnsPgQtD5o
 [-Winfinite-recursion]:https://wandbox.org/permlink/RlZOz4cCTGLWpeFL
 [-Wdivision-by-zero]:https://wandbox.org/permlink/0HhGfj6Vyya45bZT
+[-Wfortify-source]:https://wandbox.org/permlink/8kVPyQRJP9LiEJV4
 [-Wnull-conversion]:https://wandbox.org/permlink/ABZSxzM9XR0r1a4B
 [-Wdangling-else]:https://wandbox.org/permlink/GroeDOmm6CQWjxVV
