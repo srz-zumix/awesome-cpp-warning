@@ -34,6 +34,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |unnamed 'type' as actual parameter|[/W1 C4036](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4036?view=vs-2019)|-|-||
 |'modifier' : illegal ambient class modifier|[/W1 C4038](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4038?view=vs-2019)|-|-||
 |compiler limit : terminating browser output|[/W1 C4041](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4041?view=vs-2019)|-|-||
+|'identifier' : has bad storage class|[/W1 C4042](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4042?view=vs-2019)|-|-|
 
 ## VS C4200-C4399
 
@@ -177,6 +178,14 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |'function' : function is compiled as native code: 'reason'|[/W1,3 C4793](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-and-3-c4793?view=vs-2019)|-|-|
 |segment of thread local storage variable 'variable' changed from 'section name' to '.tls$'|[/W1 C4794](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4794?view=vs-2019)|-|-|
 |No EMMS at end of function 'function'|[/W1 C4799](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4799?view=vs-2019)|||
+
+## VS C4800-C5999
+
+|Summary|Visual Studio|GCC|Clang|Clang message|is Same|
+|:---|:--:|:--:|:--:|:--|:--|
+|Implicit conversion from 'type' to bool. Possible information loss|[/W4 C4800](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-3-c4800?view=vs-2019)|[-Wdeprecated](https://wandbox.org/permlink/7WPm3AtsK9MNJQzM)|[-Wdeprecated-increment-bool](https://wandbox.org/permlink/nN08ecy8eyAaR7IN)|incrementing expression of type bool is deprecated and incompatible with C++17|:ballot_box_with_check:|
+|'method' : the raise method has a different storage class from that of the event, 'event'|[/W1 C4803](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4803?view=vs-2019)|-|-|
+
 
 ## no VS
 
