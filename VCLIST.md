@@ -35,6 +35,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |'modifier' : illegal ambient class modifier|[/W1 C4038](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4038?view=vs-2019)|-|-||
 |compiler limit : terminating browser output|[/W1 C4041](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4041?view=vs-2019)|-|-||
 |'identifier' : has bad storage class|[/W1 C4042](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4042?view=vs-2019)|-|-|
+|'array' : array bounds overflow|[/W1 C4045](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4045?view=vs-2019)||||
 
 ## VS C4200-C4399
 
