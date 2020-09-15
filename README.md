@@ -27,7 +27,9 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |           |                           |           | [-Wduplicate-decl-specifier][]   | /W1   | C4114, C4141 |
 |           | -Wbuiltin-macro-redefined |           | [-Wbuiltin-macro-redefined][]    | /W1   | C4117 |
 |           | warning                   |           | [-Wunknown-escape-sequence][]    | /W1   | C4129 |
-|           | [-Waddress]               |           | [-Wstring-compare][]             | /W4   | C4130 |
+|           | [-Waddress][]             |           | [-Wstring-compare][]             | /W4   | C4130 |
+|           |                           |           | [-Wswitch-bool][]                | /W1   | C4144, C4145 |
+|           | -Wdelete-incomplete       |           | [-Wdelete-incomplete][]          | /W2   | C4150 |
 | -pedantic | -Wpedantic                | -pedantic | [-Wzero-length-array][]          | /W2,4 | C4200 |
 | -pedantic | -Wpedantic                | -pedantic | [-Wgnu-anonymous-struct][]       | /W4   | C4201 |
 | -         | -Wundef                   | -         | [-Wundef][]                      | /W4   | C4668 |
@@ -48,6 +50,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 [-Wcomma-subscript]:https://wandbox.org/permlink/aOaBTW9UwVfb9hfP
 [-Wcomment]:https://wandbox.org/permlink/cK2Ulm07VwtI2NIN
 [-Wdangling-else]:https://wandbox.org/permlink/GroeDOmm6CQWjxVV
+[-Wdelete-incomplete]:https://wandbox.org/permlink/K6r1Yfsu7n9bfGCk
 [-Wdeprecated-comma-subscript]:https://wandbox.org/permlink/mmD72OEmb9GsIEU1
 [-Wdivision-by-zero]:https://wandbox.org/permlink/0HhGfj6Vyya45bZT
 [-Wduplicate-decl-specifier]:https://wandbox.org/permlink/3j36NXx7PZRFSowX
@@ -67,6 +70,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 [-Wsometimes-uninitialized]:https://wandbox.org/permlink/OKj3yYplXtXeG1uB
 [-Wstring-compare]:https://wandbox.org/permlink/zgBHQfYXOT7KIGGg
 [-Wswitch]:https://wandbox.org/permlink/X14xNQbbxmgU1W2f
+[-Wswitch-bool]:https://wandbox.org/permlink/vL1ObRTKd8d0hkOR
 [-Wswitch-enum]:https://wandbox.org/permlink/PUm5ULD8MXDnpoye
 [-Wundef]:https://wandbox.org/permlink/jGR75x8PNLTi3dfB
 [-Wuninitialized]:https://wandbox.org/permlink/hy2fINy0pbOrCjJR
