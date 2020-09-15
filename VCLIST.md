@@ -17,7 +17,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |'identifier' : type of bit field must be integral|~[/W1 C4015](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4015?view=vs-2019)~ [error C2150](https://docs.microsoft.com/en-us/cpp/error-messages/compiler-errors-1/compiler-error-c2150?view=vs-2019)|[error](https://wandbox.org/permlink/WAcuoBfxIkWruthx)|[error](https://wandbox.org/permlink/iy7ELswBh55cSs2G)|bit-field '_IDENTIFIER_' has non-integral type '_TYPE_'|
 |'expression' : signed/unsigned mismatch|[/W3 C4018](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-3-c4018?view=vs-2019)|[-Wsign-compare](https://wandbox.org/permlink/z4RHK3d2JBRE7y4d)|[-Wsign-compare](https://wandbox.org/permlink/fxZyhxNfIrukjAjs)|comparison of integers of different signs: 'unsigned _TYPE_' and '_TYPE_'|:ballot_box_with_check:|
 |empty statement at global scope|[/W4 C4019](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-4-c4019?view=vs-2019)|-|[-Wextra-semi-stmt](https://wandbox.org/permlink/t2lN0EJnAuktq96r)|empty expression statement has no effect; remove unnecessary ';' to silence this warning |:ballot_box_with_check:|
-|'function' : too many actual parameters|~[/W1 C4020](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4020?view=vs-2019)~ [error C2660](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-errors-2/compiler-error-c2660?view=vs-2019)|error|[error](https://wandbox.org/permlink/lomKAAkKfSylm4XI)||
+|'function' : too many actual parameters|~[/W1 C4020](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4020?view=vs-2019)~ [error C2660][]|error|[error](https://wandbox.org/permlink/lomKAAkKfSylm4XI)||
 |'function' : pointer mismatch for actual parameter 'number'|[/W1 C4022](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4022?view=vs-2019)||||
 |'symbol' : based pointer passed to unprototyped function : parameter number|[/W3 4023](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-3-c4023?view=vs-2019)||||
 |'function' : different types for formal and actual parameter 'number'|[/W1 C4024](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4024?view=vs-2019)||||
@@ -45,6 +45,36 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |'conversion' : from data pointer 'type1' to function pointer 'type2'|~[/W1 4055](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4055?view=vs-2019)~ [Obsolete VS2017][]|-|-|
 |overflow in floating point constant arithmetic|[/W2 C4056](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-2-c4056?view=vs-2019) ??|||
 |'operator' : 'identifier1' indirection to slightly different base types from 'identifier2'|[/W4 C4057](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-4-c4057?view=vs-2019) [C-Only][]|||
+|enumerator 'identifier' in switch of enum 'enumeration' is not explicitly handled by a case label|[/W4 C4061](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-4-c4061?view=vs-2019) [Off][]|-Wswitch-enum|[-Wswitch-enum](https://wandbox.org/permlink/PUm5ULD8MXDnpoye)|enumeration value '_NAME_' not explicitly handled in switch |:ballot_box_with_check:|
+|enumerator 'identifier' in switch of enum 'enumeration' is not handled|[/W4 C4062](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-4-c4062?view=vs-2019) [Off][]|-Wswitch|[-Wswitch](https://wandbox.org/permlink/X14xNQbbxmgU1W2f)|enumeration value '_NAME_' not handled in switch|:ballot_box_with_check:|
+|characters beyond first in wide-character constant ignored|[/W3 C4066](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-3-c4066?view=vs-2019)||
+|unexpected tokens following preprocessor directive - expected a newline|[/W1 C4067](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4067?view=vs-2019)|[error,warning,-Wendif-labels](https://wandbox.org/permlink/Ht27NdPvIYzkLU6s)|[error, -Wextra-tokens](https://wandbox.org/permlink/GWAzROCAePlNDfxT)|extra tokens at end of _TOKEN_ directive|:ballot_box_with_check:|
+|unknown pragma|[/W1 C4068](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4068?view=vs-2019)|-Wunknown-pragmas|[-Wunknown-pragmas](https://wandbox.org/permlink/D8mn6FhQXORZBUkp)|unknown pragma ignored|:ballot_box_with_check|
+|initializers put in library initialization area|[/W3 C4073](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-3-c4073?view=vs-2019)|-Wunknown-pragmas|-Wunknown-pragmas||
+|initializers put in compiler reserved initialization area|[/W1 C4074](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4074?view=vs-2019)|-Wunknown-pragmas|-Wunknown-pragmas||
+|initializers put in unrecognized initialization area|[/W1 C4075](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4075?view=vs-2019)|-Wunknown-pragmas|-Wunknown-pragmas||
+|'type modifier' : can not be used with type 'typename'|[/W1 C4076](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4076?view=vs-2019)|error|[error](https://wandbox.org/permlink/vvwd35DoNR40fW7f)||
+|unknown check_stack option|[/W1 C4077](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4077?view=vs-2019)|-Wunknown-pragmas|-Wunknown-pragmas||
+|unexpected token 'token'|[/W1 C4079](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4079?view=vs-2019)|-Wpragma|-Wignored-pragmas|
+|expected identifier for segment name; found 'symbol'|[/W1 C4080](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4080?view=vs-2019)|-Wunknown-pragmas|-Wunknown-pragmas||
+|expected 'token1'; found 'token2'|[/W1 C4081](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4081?view=vs-2019)|-Wunknown-pragmas|-Wunknown-pragmas||
+|expected 'token'; found identifier 'identifier'|[/W1 C4083](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4083?view=vs-2019)|-Wunknown-pragmas|-Wunknown-pragmas||
+|expected pragma parameter to be 'on' or 'off'|[/W1 C4085](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4085?view=vs-2019)|-Wunknown-pragmas|-Wunknown-pragmas||
+|expected pragma parameter to be '1', '2', '4', '8', or '16'|[/W1 C4086](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4086?view=vs-2019)|-Wpragma|-Wignored-pragmas|
+|'function' : declared with 'void' parameter list|~[/W1 C4087](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4087?view=vs-2019)~ [error C2660][]|error|error|
+|'function' : pointer mismatch in actual parameter 'number', formal parameter 'number'|[/W1 C4088](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4088?view=vs-2019)||
+|'function' : different types in actual parameter 'number', formal parameter 'number'|[/W1 C4089](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4089?view=vs-2019)|||
+|'operation' : different 'modifier' qualifiers|[/W1 C4090](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4090?view=vs-2019) [C-Only][]||
+|'keyword' : ignored on left of 'type' when no variable is declared|[/W1 C4091](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4091?view=vs-2019)|error|error|
+|sizeof returns 'unsigned long'|[/W4 C4092](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-4-c4092?view=vs-2019)||
+|untagged 'token' declared no symbols|[/W2 4094](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-2-c4094?view=vs-2019)|error|[error](https://wandbox.org/permlink/sKSWL8bsVWNxvIBn)||
+|'a': interface is not a COM interface; will not be emitted to IDL|[/W1 C4096](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4096?view=vs-2019)|-|-|
+|expected pragma parameter to be 'restore' or 'off'|[/W1 C4097](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4097?view=vs-2019)|-Wunknown-pragmas|-Wunknown-pragmas||
+|'function' : void function returning a value|[/W1 C4098](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4098?view=vs-2019)|||
+|'identifier' : type name first seen using 'objecttype1' now seen using 'objecttype2'|[/W2 C4099](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-2-c4099?view=vs-2019)|NOWARN|[-Wmismatched-tags](https://wandbox.org/permlink/a7KmDSJZeiKS8ICp)|'?IDENTIFIER_' defined as a class here but previously declared as a struct; this is valid, but may result in linker errors under the Microsoft C++ ABI|:ballot_box_with_check:|
+|'identifier' : unreferenced formal parameter|[/W4 C4100](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-4-c4100?view=vs-2019)|-Wunused-parameter|[-Wunused-parameter](https://wandbox.org/permlink/Lg6HoqMG8MZGuvHp)|unused parameter '_IDENTIFIER_'|:ballot_box_with_check:|
+|'identifier' : unreferenced local variable|[/W3 C4101](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-3-c4101?view=vs-2019)|-Wunused-variable|[-Wunused-variable](https://wandbox.org/permlink/sZKVILFpyoQUnljb)|unused variable '_IDENTIFIER_'|:ballot_box_with_check:|
+|'label' : unreferenced label|[/W3 C4102](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-3-c4102?view=vs-2019)|-Wunused-label|[-Wunused-label](https://wandbox.org/permlink/slCUpdY7trnfRtFU)|unused label '_LABEL_'|:ballot_box_with_check:|
 
 ## VS C4200-C4399
 
@@ -210,6 +240,10 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 
 C only warning??
 
+### Off
+
+This warning is off by default.
+
 ### Obsolete
 
 * VS2017  
@@ -217,3 +251,6 @@ Obsolete: This warning is not generated by Visual Studio 2017 and later versions
 
 [Obsolete VS2017]:#Obsolete
 [C-Only]:#C-Only
+[Off]:#Off
+
+[error C2660]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-errors-2/compiler-error-c2660?view=vs-2019
