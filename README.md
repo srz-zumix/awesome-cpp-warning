@@ -30,6 +30,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |           | [-Waddress][]             |           | [-Wstring-compare][]             | /W4   | C4130 |
 |           |                           |           | [-Wswitch-bool][]                | /W1   | C4144, C4145 |
 |           | -Wdelete-incomplete       |           | [-Wdelete-incomplete][]          | /W2   | C4150 |
+|           | [-Wreturn-local-addr][]   |           | [-Wreturn-stack-address][]       | /W1   | C4172 |
 | -pedantic | -Wpedantic                | -pedantic | [-Wzero-length-array][]          | /W2,4 | C4200 |
 | -pedantic | -Wpedantic                | -pedantic | [-Wgnu-anonymous-struct][]       | /W4   | C4201 |
 | -         | -Wundef                   | -         | [-Wundef][]                      | /W4   | C4668 |
@@ -65,6 +66,8 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 [-Wnull-conversion]:https://wandbox.org/permlink/ABZSxzM9XR0r1a4B
 [-Wparentheses]:https://wandbox.org/permlink/0aY8EHsyCWoz93fa
 [-Wpragma-pack]:https://wandbox.org/permlink/ip1Ds0WQRxFwdQp4
+[-Wreturn-local-addr]:https://wandbox.org/permlink/pBWhp5u8AugJyQDD
+[-Wreturn-stack-address]:https://wandbox.org/permlink/LWuZrYzmknFgkHav
 [-Wreturn-type]:https://wandbox.org/permlink/l8AKsXFnsPgQtD5o
 [-Wsign-compare]:https://wandbox.org/permlink/fxZyhxNfIrukjAjs
 [-Wsometimes-uninitialized]:https://wandbox.org/permlink/OKj3yYplXtXeG1uB

@@ -115,6 +115,12 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |#pragma pragma(pop...) : more pops than pushes|[/W3 C4161](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-3-c4161?view=vs-2019)|-|-|
 |'identifier' : no function with C linkage found|[/W1 C4162](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4162?view=vs-2019)|-|-|
 |'identifier' : not available as an intrinsic function|[/W1 C4163](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4163?view=vs-2019)|-|-|
+|'identifier' : intrinsic function not declared|[/W1 C4164](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4164?view=vs-2019)|-|-|
+|'HRESULT' is being converted to 'bool'; are you sure this is what you want?|[/W1 4165](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4165?view=vs-2019)|-|-|
+|illegal calling convention for constructor/destructor|[/W1 C4166](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4166?view=vs-2019)|-|-|
+|function : only available as an intrinsic function|[/W1 C4167](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4167?view=vs-2019)|-|-|
+|compiler limit : out of debugger types, delete program database 'database' and rebuild|[/W1 C4168](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4168?view=vs-2019)|-|-|
+|returning address of local variable or temporary|[/W1 C4172](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4172?view=vs-2019)|[-Wreturn-local-addr](https://wandbox.org/permlink/pBWhp5u8AugJyQDD)|[-Wreturn-stack-address](https://wandbox.org/permlink/LWuZrYzmknFgkHav)|returning reference to local temporary object|:ballot_box_with_check:|
 
 ## VS C4200-C4399
 
