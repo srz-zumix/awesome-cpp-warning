@@ -20,7 +20,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |           | -Wunknown-pragmas         |           | [-Wunknown-pragmas][]            | /W1   | C4068 |
 |           |                           |           | [-Wmismatched-tags][]            | /W2   | C4099 |
 |           | -Wunused-parameter        |           | [-Wunused-parameter][]           | /W4   | C4100 |
-|           | -Wunused-variable         |           | [-Wunused-variable][]            | /W3   | C4101 |
+|           | -Wunused-variable         |           | [-Wunused-variable][]            | /W3,/W4   | C4101,C4189 |
 |           | -Wunused-label            |           | [-Wunused-label][]               | /W3   | C4102 |
 |           |                           |           | [-Wpragma-pack][]                | /W1   | C4103 |
 | -pedantic | warning                   | -pedantic | [-Wgnu-zero-line-directive][]    | /W1,4 | C4112 |
@@ -31,6 +31,10 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |           |                           |           | [-Wswitch-bool][]                | /W1   | C4144, C4145 |
 |           | -Wdelete-incomplete       |           | [-Wdelete-incomplete][]          | /W2   | C4150 |
 |           | [-Wreturn-local-addr][]   |           | [-Wreturn-stack-address][]       | /W1   | C4172 |
+| error     | [-Wnarrowing][]           | error     | [-Wc++11-narrowing][]            | /W1   | C4178 |
+|           |                           |           | [-Wignored-qualifiers][]         | /W1   | C4180 |
+|           | -Wignored-qualifiers      |           |                                  | /W3   | C4197 |
+|           |                           |           | [-Wreturn-type-c-linkage][]      | /W1   | C4190 |
 | -pedantic | -Wpedantic                | -pedantic | [-Wzero-length-array][]          | /W2,4 | C4200 |
 | -pedantic | -Wpedantic                | -pedantic | [-Wgnu-anonymous-struct][]       | /W4   | C4201 |
 | -         | -Wundef                   | -         | [-Wundef][]                      | /W4   | C4668 |
@@ -48,6 +52,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 
 [-Waddress]:https://wandbox.org/permlink/MQnCpnpN1HPmr7lz
 [-Wbuiltin-macro-redefined]:https://wandbox.org/permlink/fP8RAUGwYj4qsPfO
+[-Wc++11-narrowing]:https://wandbox.org/permlink/GCuBpZyoVaCLGYeU
 [-Wcomma-subscript]:https://wandbox.org/permlink/aOaBTW9UwVfb9hfP
 [-Wcomment]:https://wandbox.org/permlink/cK2Ulm07VwtI2NIN
 [-Wdangling-else]:https://wandbox.org/permlink/GroeDOmm6CQWjxVV
@@ -60,15 +65,18 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 [-Wfortify-source]:https://wandbox.org/permlink/8kVPyQRJP9LiEJV4
 [-Wgnu-anonymous-struct]:https://wandbox.org/permlink/SlT2dcwmnJRE8eKo
 [-Wgnu-zero-line-directive]:https://wandbox.org/permlink/68eMjVotYyqwkaqd
+[-Wignored-qualifiers]:https://wandbox.org/permlink/eCGVd8s2oBd7tqGi
 [-Winfinite-recursion]:https://wandbox.org/permlink/RlZOz4cCTGLWpeFL
 [-Wmacro-redefined]:https://wandbox.org/permlink/FeN9eryQ6AjJtPm1
 [-Wmismatched-tags]:https://wandbox.org/permlink/a7KmDSJZeiKS8ICp
+[-Wnarrowing]:https://wandbox.org/permlink/38PevVKq6JDJbGEh
 [-Wnull-conversion]:https://wandbox.org/permlink/ABZSxzM9XR0r1a4B
 [-Wparentheses]:https://wandbox.org/permlink/0aY8EHsyCWoz93fa
 [-Wpragma-pack]:https://wandbox.org/permlink/ip1Ds0WQRxFwdQp4
 [-Wreturn-local-addr]:https://wandbox.org/permlink/pBWhp5u8AugJyQDD
 [-Wreturn-stack-address]:https://wandbox.org/permlink/LWuZrYzmknFgkHav
 [-Wreturn-type]:https://wandbox.org/permlink/l8AKsXFnsPgQtD5o
+[-Wreturn-type-c-linkage]:https://wandbox.org/permlink/SEWKt2JcLBnAdeZH
 [-Wsign-compare]:https://wandbox.org/permlink/fxZyhxNfIrukjAjs
 [-Wsometimes-uninitialized]:https://wandbox.org/permlink/OKj3yYplXtXeG1uB
 [-Wstring-compare]:https://wandbox.org/permlink/zgBHQfYXOT7KIGGg
