@@ -15,7 +15,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |           | -Wsign-compare            |           | [-Wsign-compare][]               | /W3   | C4018 |
 |           |                           |           | [-Wextra-semi-stmt][]            | /W4   | C4019 |
 | -         | -Wswitch-enum             | -         | [-Wswitch-enum][]                | /W4   | C4061 |
-|           | -Wswitch                  |           | [-Wswitch][]                     | /W4   | C4062 |
+|           | -Wswitch                  |           | [-Wswitch][]                     | /W4,   | C4062,C4063 |
 |           | -Wendif-labels            |           | [-Wextra-tokens][]               | /W1   | C4067 |
 |           | -Wunknown-pragmas         |           | [-Wunknown-pragmas][]            | /W1   | C4068 |
 |           |                           |           | [-Wmismatched-tags][]            | /W2   | C4099 |
@@ -37,6 +37,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |           |                           |           | [-Wreturn-type-c-linkage][]      | /W1   | C4190 |
 | -pedantic | -Wpedantic                | -pedantic | [-Wzero-length-array][]          | /W2,4 | C4200 |
 | -pedantic | -Wpedantic                | -pedantic | [-Wgnu-anonymous-struct][]       | /W4   | C4201 |
+|           | [-Wconversion][]          |           | [-Wimplicit-int-conversion][]    | /W4   | C4242 |
 | -         | -Wundef                   | -         | [-Wundef][]                      | /W4   | C4668 |
 |           | -Wuninitialized           |           | [-Wuninitialized][]              | /W1,4 | C4700 |
 |           |                           |           | [-Wsometimes-uninitialized][]    | /W4   | C4701, C4703 |
@@ -55,6 +56,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 [-Wc++11-narrowing]:https://wandbox.org/permlink/GCuBpZyoVaCLGYeU
 [-Wcomma-subscript]:https://wandbox.org/permlink/aOaBTW9UwVfb9hfP
 [-Wcomment]:https://wandbox.org/permlink/cK2Ulm07VwtI2NIN
+[-Wconversion]:https://wandbox.org/permlink/AZLe3ZNt84ruJkBr
 [-Wdangling-else]:https://wandbox.org/permlink/GroeDOmm6CQWjxVV
 [-Wdelete-incomplete]:https://wandbox.org/permlink/K6r1Yfsu7n9bfGCk
 [-Wdeprecated-comma-subscript]:https://wandbox.org/permlink/mmD72OEmb9GsIEU1
@@ -66,6 +68,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 [-Wgnu-anonymous-struct]:https://wandbox.org/permlink/SlT2dcwmnJRE8eKo
 [-Wgnu-zero-line-directive]:https://wandbox.org/permlink/68eMjVotYyqwkaqd
 [-Wignored-qualifiers]:https://wandbox.org/permlink/eCGVd8s2oBd7tqGi
+[-Wimplicit-int-conversion]:https://wandbox.org/permlink/jw7P7K3ei05sCgmM
 [-Winfinite-recursion]:https://wandbox.org/permlink/RlZOz4cCTGLWpeFL
 [-Wmacro-redefined]:https://wandbox.org/permlink/FeN9eryQ6AjJtPm1
 [-Wmismatched-tags]:https://wandbox.org/permlink/a7KmDSJZeiKS8ICp
