@@ -37,7 +37,12 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |           |                           |           | [-Wreturn-type-c-linkage][]      | /W1   | C4190 |
 | -pedantic | -Wpedantic                | -pedantic | [-Wzero-length-array][]          | /W2,4 | C4200 |
 | -pedantic | -Wpedantic                | -pedantic | [-Wgnu-anonymous-struct][]       | /W4   | C4201 |
-|           | [-Wconversion][]          |           | [-Wimplicit-int-conversion][]    | /W4   | C4242 |
+| -         | -Wconversion              | -         | [-Wimplicit-int-conversion][]    | /W4   | C4242 |
+| -         | -Wfloat-conversion        | -         | [-Wfloat-conversion][]           | /W2   | C4244 |
+| -         | -Wconversion              | -         | [-Wconversion][]                 | /W3,4 | C4244 |
+| -         | -Wsign-conversion         | -         | [-Wsign-conversion][]            | /W4   | C4245 |
+| -         | -Woverloaded-virtual      |           | [-Woverloaded-virtual][]         | /W4   | C4263 |
+| -         | -Wnon-virtual-dtor        | -         | [-Wnon-virtual-dtor][]           | /W3   | C4265 |
 | -         | -Wundef                   | -         | [-Wundef][]                      | /W4   | C4668 |
 |           | -Wuninitialized           |           | [-Wuninitialized][]              | /W1,4 | C4700 |
 |           |                           |           | [-Wsometimes-uninitialized][]    | /W4   | C4701, C4703 |
@@ -47,6 +52,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |           | -Wreturn-type             |           | [-Wreturn-type][]                | /W1   | C4715, C4716 |
 |           |                           |           | [-Winfinite-recursion][]         | /W1   | C4717 |
 |           | -Wdiv-by-zero             |           | [-Wdivision-by-zero][]           | /W3   | C4723, C4274 |
+|           |                           |           | [-Wcast-align][]                 | /W1   | C4739 |
 |           |                           |           | [-Wfortify-source][]             | /W1   | C4789 |
 |           | -Wconversion-null         |           | [-Wnull-conversion][]            | | |
 |           | -Wdangling-else           |           | [-Wdangling-else][]              | | |
@@ -54,9 +60,10 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 [-Waddress]:https://wandbox.org/permlink/MQnCpnpN1HPmr7lz
 [-Wbuiltin-macro-redefined]:https://wandbox.org/permlink/fP8RAUGwYj4qsPfO
 [-Wc++11-narrowing]:https://wandbox.org/permlink/GCuBpZyoVaCLGYeU
+[-Wcast-align]:https://wandbox.org/permlink/89DcTrPTtwLv3XKb
 [-Wcomma-subscript]:https://wandbox.org/permlink/aOaBTW9UwVfb9hfP
 [-Wcomment]:https://wandbox.org/permlink/cK2Ulm07VwtI2NIN
-[-Wconversion]:https://wandbox.org/permlink/AZLe3ZNt84ruJkBr
+[-Wconversion]:https://wandbox.org/permlink/pl2CyQXzdcUzrkBy
 [-Wdangling-else]:https://wandbox.org/permlink/GroeDOmm6CQWjxVV
 [-Wdelete-incomplete]:https://wandbox.org/permlink/K6r1Yfsu7n9bfGCk
 [-Wdeprecated-comma-subscript]:https://wandbox.org/permlink/mmD72OEmb9GsIEU1
@@ -64,6 +71,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 [-Wduplicate-decl-specifier]:https://wandbox.org/permlink/3j36NXx7PZRFSowX
 [-Wextra-semi-stmt]:https://wandbox.org/permlink/t2lN0EJnAuktq96r
 [-Wextra-tokens]:https://wandbox.org/permlink/GWAzROCAePlNDfxT
+[-Wfloat-conversion]:https://wandbox.org/permlink/DKO2n3JIUqlIbgrv
 [-Wfortify-source]:https://wandbox.org/permlink/8kVPyQRJP9LiEJV4
 [-Wgnu-anonymous-struct]:https://wandbox.org/permlink/SlT2dcwmnJRE8eKo
 [-Wgnu-zero-line-directive]:https://wandbox.org/permlink/68eMjVotYyqwkaqd
@@ -73,7 +81,9 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 [-Wmacro-redefined]:https://wandbox.org/permlink/FeN9eryQ6AjJtPm1
 [-Wmismatched-tags]:https://wandbox.org/permlink/a7KmDSJZeiKS8ICp
 [-Wnarrowing]:https://wandbox.org/permlink/38PevVKq6JDJbGEh
+[-Wnon-virtual-dtor]:https://wandbox.org/permlink/KeW1Px6KLH9WB9bz
 [-Wnull-conversion]:https://wandbox.org/permlink/ABZSxzM9XR0r1a4B
+[-Woverloaded-virtual]:https://wandbox.org/permlink/ZAV9lUH5hRDbZZgv
 [-Wparentheses]:https://wandbox.org/permlink/0aY8EHsyCWoz93fa
 [-Wpragma-pack]:https://wandbox.org/permlink/ip1Ds0WQRxFwdQp4
 [-Wreturn-local-addr]:https://wandbox.org/permlink/pBWhp5u8AugJyQDD
@@ -81,6 +91,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 [-Wreturn-type]:https://wandbox.org/permlink/l8AKsXFnsPgQtD5o
 [-Wreturn-type-c-linkage]:https://wandbox.org/permlink/SEWKt2JcLBnAdeZH
 [-Wsign-compare]:https://wandbox.org/permlink/fxZyhxNfIrukjAjs
+[-Wsign-conversion]:https://wandbox.org/permlink/nar9aUENFpL8ZlCq
 [-Wsometimes-uninitialized]:https://wandbox.org/permlink/OKj3yYplXtXeG1uB
 [-Wstring-compare]:https://wandbox.org/permlink/zgBHQfYXOT7KIGGg
 [-Wswitch]:https://wandbox.org/permlink/X14xNQbbxmgU1W2f
