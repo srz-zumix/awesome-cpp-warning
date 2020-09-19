@@ -15,12 +15,14 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |           | -Wsign-compare            |           | [-Wsign-compare][]               | /W3   | C4018, C4287 |
 |           |                           |           | [-Wextra-semi-stmt][]            | /W4   | C4019 |
 | -         | -Wswitch-enum             | -         | [-Wswitch-enum][]                | /W4   | C4061 |
-|           | -Wswitch                  |           | [-Wswitch][]                     | /W4,  | C4062, C4063 |
+|           | -Wswitch                  |           | [-Wswitch][]                     | /W4   | C4062 |
+|           | -Wswitch                  |           | [-Wswitch][]                     |       | C4063 |
 |           | -Wendif-labels            |           | [-Wextra-tokens][]               | /W1   | C4067 |
 |           | -Wunknown-pragmas         |           | [-Wunknown-pragmas][]            | /W1   | C4068 |
 |           |                           |           | [-Wmismatched-tags][]            | /W2   | C4099 |
 |           | -Wunused-parameter        |           | [-Wunused-parameter][]           | /W4   | C4100 |
-|           | -Wunused-variable         |           | [-Wunused-variable][]            | /W3,/W4 | C4101, C4189 |
+|           | -Wunused-variable         |           | [-Wunused-variable][]            | /W3   | C4101 |
+|           | -Wunused-variable         |           | [-Wunused-variable][]            | /W4   | C4189 |
 |           | -Wunused-label            |           | [-Wunused-label][]               | /W3   | C4102 |
 |           |                           |           | [-Wpragma-pack][]                | /W1   | C4103 |
 | -pedantic | warning                   | -pedantic | [-Wgnu-zero-line-directive][]    | /W1,4 | C4112 |
@@ -40,17 +42,24 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 | -         | -Wconversion              | -         | [-Wimplicit-int-conversion][]    | /W4   | C4242 |
 | -         | -Wfloat-conversion        | -         | [-Wfloat-conversion][]           | /W2   | C4244 |
 | -         | -Wconversion              | -         | [-Wconversion][]                 | /W3,4 | C4244 |
-| -         | -Wsign-conversion         | -         | [-Wsign-conversion][]            | /W4   | C4245 |
+| -         | -Wsign-conversion         | -         | [-Wsign-conversion][]            | /W2   | C4308 |
+| -         | -Wsign-conversion         | -         | [-Wsign-conversion][]            | /W4   | C4245, C4365 |
 | -         | -Woverloaded-virtual      |           | [-Woverloaded-virtual][]         | /W4   | C4263 |
 | -         | -Wnon-virtual-dtor        | -         | [-Wnon-virtual-dtor][]           | /W3   | C4265 |
 | -         | -Wconversion              | -         | [-Wshorten-64-to-32][]           | /W3   | C4267 |
 |           | warning                   |           | [-Wexceptions][]                 | /W1   | C4286 |
 |           | -Wshift-count-overflow    |           | [-Wshift-count-overflow][]       | /W1   | C4293 |
 |           | [-Wtype-limits][]         |           | [-Wtautological-unsigned-zero-compare][] | /W4 | C4296 |
+| -         | -Wfloat-conversion        | -         | [-Wimplicit-float-conversion][]  | /W1   | C4305 |
+|           | [-Woverflow][]            |           | [-Winteger-overflow][]           | /W2   | C4307 |
+| -         | -Wconversion              |           | [-Wconstant-conversion][]        | /W2   | C4309 |
+|           | -Wint-to-void-pointer-cast|           | [-Wint-to-void-pointer-cast][]   | /W1   | C4312 |
+|           | -Wformat                  |           | [-Wformat][]                     | /W1   | C4313 |
 | -         | -Wundef                   | -         | [-Wundef][]                      | /W4   | C4668 |
 |           | -Wuninitialized           |           | [-Wuninitialized][]              | /W1,4 | C4700 |
 |           |                           |           | [-Wsometimes-uninitialized][]    | /W4   | C4701, C4703 |
-| -         | -Wunreachable-code        | -         | [-Wunreachable-code][]           | /W4,/W1   | C4702, C4288 |
+| -         | -Wunreachable-code        | -         | [-Wunreachable-code][]           | /W1   | C4288 |
+| -         | -Wunreachable-code        | -         | [-Wunreachable-code][]           | /W4   | C4702 |
 |           | -Wparentheses             |           | [-Wparentheses][]                | /W4   | C4706 |
 |           | [-Wcomma-subscript][]     |           | [-Wdeprecated-comma-subscript][] | /W4   | C4709 |
 |           | -Wreturn-type             |           | [-Wreturn-type][]                | /W1   | C4715, C4716 |
@@ -67,6 +76,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 [-Wcast-align]:https://wandbox.org/permlink/89DcTrPTtwLv3XKb
 [-Wcomma-subscript]:https://wandbox.org/permlink/aOaBTW9UwVfb9hfP
 [-Wcomment]:https://wandbox.org/permlink/cK2Ulm07VwtI2NIN
+[-Wconstant-conversion]:https://wandbox.org/permlink/YCDxr5fAZmoTYlDP
 [-Wconversion]:https://wandbox.org/permlink/pl2CyQXzdcUzrkBy
 [-Wdangling-else]:https://wandbox.org/permlink/GroeDOmm6CQWjxVV
 [-Wdelete-incomplete]:https://wandbox.org/permlink/K6r1Yfsu7n9bfGCk
@@ -77,17 +87,21 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 [-Wextra-semi-stmt]:https://wandbox.org/permlink/t2lN0EJnAuktq96r
 [-Wextra-tokens]:https://wandbox.org/permlink/GWAzROCAePlNDfxT
 [-Wfloat-conversion]:https://wandbox.org/permlink/DKO2n3JIUqlIbgrv
+[-Wformat]:https://wandbox.org/permlink/UEnKVbHljnoDpEkZ
 [-Wfortify-source]:https://wandbox.org/permlink/8kVPyQRJP9LiEJV4
 [-Wgnu-anonymous-struct]:https://wandbox.org/permlink/SlT2dcwmnJRE8eKo
 [-Wgnu-zero-line-directive]:https://wandbox.org/permlink/68eMjVotYyqwkaqd
 [-Wignored-qualifiers]:https://wandbox.org/permlink/eCGVd8s2oBd7tqGi
+[-Wimplicit-float-conversion]:https://wandbox.org/permlink/mlDb0iY7nmCfWsLa
 [-Wimplicit-int-conversion]:https://wandbox.org/permlink/jw7P7K3ei05sCgmM
 [-Winfinite-recursion]:https://wandbox.org/permlink/RlZOz4cCTGLWpeFL
+[-Winteger-overflow]:https://wandbox.org/permlink/5CFSu1o33qOFG8Hr
 [-Wmacro-redefined]:https://wandbox.org/permlink/FeN9eryQ6AjJtPm1
 [-Wmismatched-tags]:https://wandbox.org/permlink/a7KmDSJZeiKS8ICp
 [-Wnarrowing]:https://wandbox.org/permlink/38PevVKq6JDJbGEh
 [-Wnon-virtual-dtor]:https://wandbox.org/permlink/KeW1Px6KLH9WB9bz
 [-Wnull-conversion]:https://wandbox.org/permlink/ABZSxzM9XR0r1a4B
+[-Woverflow]:https://wandbox.org/permlink/jXOSXzTg16ZeVG8T
 [-Woverloaded-virtual]:https://wandbox.org/permlink/ZAV9lUH5hRDbZZgv
 [-Wparentheses]:https://wandbox.org/permlink/0aY8EHsyCWoz93fa
 [-Wpragma-pack]:https://wandbox.org/permlink/ip1Ds0WQRxFwdQp4
@@ -114,4 +128,5 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 [-Wunused-label]:https://wandbox.org/permlink/slCUpdY7trnfRtFU
 [-Wunused-parameter]:https://wandbox.org/permlink/Lg6HoqMG8MZGuvHp
 [-Wunused-variable]:https://wandbox.org/permlink/sZKVILFpyoQUnljb
+[-Wint-to-void-pointer-cast]:https://wandbox.org/permlink/ENteC23V5rCJNKBu
 [-Wzero-length-array]:https://wandbox.org/permlink/dCOhebgvxxv9adE5
