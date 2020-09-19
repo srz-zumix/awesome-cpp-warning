@@ -43,6 +43,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 | -         | -Wsign-conversion         | -         | [-Wsign-conversion][]            | /W4   | C4245 |
 | -         | -Woverloaded-virtual      |           | [-Woverloaded-virtual][]         | /W4   | C4263 |
 | -         | -Wnon-virtual-dtor        | -         | [-Wnon-virtual-dtor][]           | /W3   | C4265 |
+| -         ¥ -Wconversion              | -         | [-Wshorten-64-to-32][]           | /W3   | C4267 |
 | -         | -Wundef                   | -         | [-Wundef][]                      | /W4   | C4668 |
 |           | -Wuninitialized           |           | [-Wuninitialized][]              | /W1,4 | C4700 |
 |           |                           |           | [-Wsometimes-uninitialized][]    | /W4   | C4701, C4703 |
@@ -90,6 +91,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 [-Wreturn-stack-address]:https://wandbox.org/permlink/LWuZrYzmknFgkHav
 [-Wreturn-type]:https://wandbox.org/permlink/l8AKsXFnsPgQtD5o
 [-Wreturn-type-c-linkage]:https://wandbox.org/permlink/SEWKt2JcLBnAdeZH
+[-Wshorten-64-to-32]:https://wandbox.org/permlink/PV73kTvl4LkSOcQG
 [-Wsign-compare]:https://wandbox.org/permlink/fxZyhxNfIrukjAjs
 [-Wsign-conversion]:https://wandbox.org/permlink/nar9aUENFpL8ZlCq
 [-Wsometimes-uninitialized]:https://wandbox.org/permlink/OKj3yYplXtXeG1uB
