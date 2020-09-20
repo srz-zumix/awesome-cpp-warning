@@ -13,6 +13,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |           | warning                   |           | [-Wmacro-redefined][]            | /W1   | C4005 |
 |           | -Wcomment                 |           | [-Wcomment][]                    | /W1   | C4010 |
 |           | -Wsign-compare            |           | [-Wsign-compare][]               | /W3   | C4018, C4287 |
+|           | -Wsign-compare            |           | [-Wsign-compare][]               | /W4   | C4389 |
 |           |                           |           | [-Wextra-semi-stmt][]            | /W4   | C4019 |
 | -         | -Wswitch-enum             | -         | [-Wswitch-enum][]                | /W4   | C4061 |
 |           | -Wswitch                  |           | [-Wswitch][]                     | /W4   | C4062 |
@@ -50,11 +51,15 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |           | warning                   |           | [-Wexceptions][]                 | /W1   | C4286 |
 |           | -Wshift-count-overflow    |           | [-Wshift-count-overflow][]       | /W1   | C4293 |
 |           | [-Wtype-limits][]         |           | [-Wtautological-unsigned-zero-compare][] | /W4 | C4296 |
+| -         | -Wold-style-cast          | -         | [-Wold-style-cast][]             |       | C4303 |
 | -         | -Wfloat-conversion        | -         | [-Wimplicit-float-conversion][]  | /W1   | C4305 |
 |           | [-Woverflow][]            |           | [-Winteger-overflow][]           | /W2   | C4307 |
 | -         | -Wconversion              |           | [-Wconstant-conversion][]        | /W2   | C4309 |
 |           | -Wint-to-void-pointer-cast|           | [-Wint-to-void-pointer-cast][]   | /W1   | C4312 |
-|           | -Wformat                  |           | [-Wformat][]                     | /W1   | C4313 |
+|           | -Wformat                  |           | [-Wformat][]                     | /W1   | C4313, C4473 |
+|           | -Wformat-extra-args       |           | [-Wformat-extra-args][]          | /W1   | C4317 |
+|           | -Wmemset-transposed-args  |           | [-Wmemset-transposed-args][]     |       | C4318 |
+|           | -Wempty-body              |           | [-Wempty-body][]                 | /W3   | C4390 |
 | -         | -Wundef                   | -         | [-Wundef][]                      | /W4   | C4668 |
 |           | -Wuninitialized           |           | [-Wuninitialized][]              | /W1,4 | C4700 |
 |           |                           |           | [-Wsometimes-uninitialized][]    | /W4   | C4701, C4703 |
@@ -83,11 +88,13 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 [-Wdeprecated-comma-subscript]:https://wandbox.org/permlink/mmD72OEmb9GsIEU1
 [-Wdivision-by-zero]:https://wandbox.org/permlink/0HhGfj6Vyya45bZT
 [-Wduplicate-decl-specifier]:https://wandbox.org/permlink/3j36NXx7PZRFSowX
+[-Wempty-body]:https://wandbox.org/permlink/G6Ts7ShpqVRBFK6J
 [-Wexceptions]:https://wandbox.org/permlink/hPSJuIMRT0tMXdhj
 [-Wextra-semi-stmt]:https://wandbox.org/permlink/t2lN0EJnAuktq96r
 [-Wextra-tokens]:https://wandbox.org/permlink/GWAzROCAePlNDfxT
 [-Wfloat-conversion]:https://wandbox.org/permlink/DKO2n3JIUqlIbgrv
 [-Wformat]:https://wandbox.org/permlink/UEnKVbHljnoDpEkZ
+[-Wformat-extra-args]:https://wandbox.org/permlink/BI3Z7W3t02EoAQ00
 [-Wfortify-source]:https://wandbox.org/permlink/8kVPyQRJP9LiEJV4
 [-Wgnu-anonymous-struct]:https://wandbox.org/permlink/SlT2dcwmnJRE8eKo
 [-Wgnu-zero-line-directive]:https://wandbox.org/permlink/68eMjVotYyqwkaqd
@@ -97,10 +104,12 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 [-Winfinite-recursion]:https://wandbox.org/permlink/RlZOz4cCTGLWpeFL
 [-Winteger-overflow]:https://wandbox.org/permlink/5CFSu1o33qOFG8Hr
 [-Wmacro-redefined]:https://wandbox.org/permlink/FeN9eryQ6AjJtPm1
+[-Wmemset-transposed-args]:https://wandbox.org/permlink/DsZYpzhpjLn6Yer5
 [-Wmismatched-tags]:https://wandbox.org/permlink/a7KmDSJZeiKS8ICp
 [-Wnarrowing]:https://wandbox.org/permlink/38PevVKq6JDJbGEh
 [-Wnon-virtual-dtor]:https://wandbox.org/permlink/KeW1Px6KLH9WB9bz
 [-Wnull-conversion]:https://wandbox.org/permlink/ABZSxzM9XR0r1a4B
+[-Wold-style-cast]:https://wandbox.org/permlink/s8vAGt63s0XVZbzq
 [-Woverflow]:https://wandbox.org/permlink/jXOSXzTg16ZeVG8T
 [-Woverloaded-virtual]:https://wandbox.org/permlink/ZAV9lUH5hRDbZZgv
 [-Wparentheses]:https://wandbox.org/permlink/0aY8EHsyCWoz93fa
