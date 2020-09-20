@@ -13,7 +13,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |           | warning                   |           | [-Wmacro-redefined][]            | /W1   | C4005 |
 |           | -Wcomment                 |           | [-Wcomment][]                    | /W1   | C4010 |
 |           | -Wsign-compare            |           | [-Wsign-compare][]               | /W3   | C4018, C4287 |
-|           | -Wsign-compare            |           | [-Wsign-compare][]               | /W4   | C4389 |
+|           | -Wsign-compare            |           | [-Wsign-compare][]               | /W4   | C4388, C4389 |
 |           |                           |           | [-Wextra-semi-stmt][]            | /W4   | C4019 |
 | -         | -Wswitch-enum             | -         | [-Wswitch-enum][]                | /W4   | C4061 |
 |           | -Wswitch                  |           | [-Wswitch][]                     | /W4   | C4062 |
