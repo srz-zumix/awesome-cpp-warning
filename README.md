@@ -88,8 +88,10 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |           |                           |           | [-Wcast-align][]                   | /W1   | C4739 |
 |           |                           |           | [-Wfortify-source][]               | /W1   | C4789 |
 |           | -Wbool-compare            |           | [-Wtautological-constant-out-of-range-compare][] | /W1 | C4806 |
+|           | [-Wswitch-outside-range][]|           | (-Wswitch-bool)                    | /W1   | C4808 |
 |           |                           |           | [-Wvexing-parse][]                 | /W1   | C4930 |
 |           |                           |           | [-Wreinterpret-base-class][]       | /W1   | C4946 |
+|           | -Wdeprecated              |           | -Wdeprecated                       | /W1   | C4973, C4974 |
 |           | warning                   |           | [-Wc++17-extensions][]             |       | C4984 |
 |           | -Wdeprecated-declarations |           | [-Wdeprecated-declarations][]      | /W3   | C4996 |
 |           | -Wreorder                 |           | [-Wreorder-ctor][]                 |       | C5038 |
@@ -161,6 +163,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 [-Wstring-compare]:https://wandbox.org/permlink/zgBHQfYXOT7KIGGg
 [-Wswitch]:https://wandbox.org/permlink/X14xNQbbxmgU1W2f
 [-Wswitch-bool]:https://wandbox.org/permlink/vL1ObRTKd8d0hkOR
+[-Wswitch-outside-range]:https://wandbox.org/permlink/RYbygUf1gRwsEXkh
 [-Wswitch-enum]:https://wandbox.org/permlink/PUm5ULD8MXDnpoye
 [-Wtautological-constant-out-of-range-compare]:https://wandbox.org/permlink/5JWWi1sh4UzxlbaH
 [-Wtautological-compare]:https://wandbox.org/permlink/Y7SS3gQJXDkicCwI
