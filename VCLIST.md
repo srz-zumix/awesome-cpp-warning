@@ -415,6 +415,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |'function' : unreferenced local function has been removed|[/W4 C4505][]||
 |no definition for inline function 'function'|[/W1 C4506][]||
 |'function' : function should return a value; 'void' return type assumed|[/W1 C4508][]|error -fpermissive|[error](https://wandbox.org/permlink/KNRv1moPYOIe2ST4)|
+|nonstandard extension used: 'function' uses SEH and 'object' has destructor|[C4509][]|
 |'class' : default constructor could not be generated|[/W4 C4510][]||
 |'class' : copy constructor could not be generated|[/W3 C4511][]|
 |'class' : assignment operator could not be generated|[/W4 C4512][]|
@@ -424,11 +425,13 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |'class::symbol' : access-declarations are deprecated; member using-declarations provide a better alternative|[/W4 C4516][]|-Wdeprecated|[-Wdeprecated](https://wandbox.org/permlink/fx0Dt5z0GpD4VSlO) or [C++11 error](https://wandbox.org/permlink/6w7hlzs9bJDSTSQl)|access declarations are deprecated; use using declarations instead|
 |access-declarations are deprecated; member using-declarations provide a better alternative|[/W4 C4517][]|
 |'specifier' : storage-class or type specifier(s) unexpected here; ignored|[/W1 C4518][]|-|-|
+|default template arguments are only allowed on a class template|[error C4519][]||
 |'class' : multiple copy constructors specified|[/W3 C4521][]||
 |'class' : multiple assignment operators specified|[/W3 C4522][]||
 |'class' : multiple destructors specified|[/W3 C4523][]||
 |'function' : static member function cannot override virtual function 'virtual function'override ignored, virtual function will be hidden|[/W1 C4526][]|-|-|
 |C++ exception handler used, but unwind semantics are not enabled. Specify /EHsc|[/W1 C4530][]|NOWARN|[NOWARN](https://wandbox.org/permlink/iL5DZ0T0icV1LkdP)|
+|C++ exception handling not available on Windows CE. Use Structured Exception Handling|[/W1 C4531][]||
 |'continue' : jump out of __finally/finally block has undefined behavior during termination handling|[/W1 C4532][]|-|-|
 |initialization of 'variable' is skipped by 'instruction'|[/W1 C4533][]|error|[error](https://wandbox.org/permlink/Vvje9i5kALyVGqeb)|
 |'constructor' will not be a default constructor for class 'class' due to the default argument|[/W3 C4534][] clr|-|-|
@@ -438,6 +441,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |'type' : const/volatile qualifiers on this type are not supported|[/W3 C4538][] clr|-|-|
 |dynamic_cast used to convert to inaccessible or ambiguous base; run-time test will fail ('type1' to 'type2')|[/W1 C4540][]|error|[error](https://wandbox.org/permlink/v0kHyGDGk2ENyVXF)|cannot cast '_NAME_' to its private base class '_NAME_'||
 |'identifier' used on polymorphic type 'type' with /GR-; unpredictable behavior may result|[/W1 C4541][]|-|-|
+|Skipping generation of merged injected text file, cannot write filetype file: 'issue': message|[/W1 C4542][]||
 |Injected text suppressed by attribute 'no_injected_text'|[/W3 C4543][]|
 |'declaration': Default template argument ignored on this template declaration|[/W1 C4544][]|error|[error](https://wandbox.org/permlink/sZp3UGVNfGNANWHP)|cannot add a default template argument to the definition of a member of a class template|
 |expression before comma evaluates to a function which is missing an argument list|[/W1 C4545][]|[NOWARN](https://wandbox.org/permlink/EZTIGkO5u4a61odF)|[-Wcomma](https://wandbox.org/permlink/T14XeAelFnxMHDlU)|possible misuse of comma operator here|:ballot_box_with_check:|
@@ -456,17 +460,26 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |value of operand 'value' is out of range 'lowerbound - upperbound'|[/W1 C4558][]|-|-|
 |'function' : redefinition; the function gains __declspec(modifier)|[/W4 C4559][]|-|-||
 |'__fastcall' incompatible with the '/clr' option: converting to '__stdcall'|[/W1 C4561][]|-|-|
+|fully prototyped functions are required with the '/clr' option: converting '()' to '(void)'|[/W4 C4562][] clr|-|-|
 |method 'method' of class 'class' defines unsupported default parameter 'parameter'|-|-|
 |'function' : redefinition; the symbol was previously declared with __declspec(modifier)|[/W4 C4565][]|-|-|
 |character represented by universal-character-name 'char' cannot be represented in the current code page (page)|[/W1 C4566][]|[-Wmultichar](https://wandbox.org/permlink/zFGKNIXEuswp8qrR)|[error](https://wandbox.org/permlink/7bvjGqxOkB1Ice0D)|character too large for enclosing character literal type|:ballot_box_with_check:|
+|'function': no members match the signature of the explicit override|[/W1 C4568][]|
+|'function': no members match the signature of the explicit override|[/W3 C4569][]||
 |'type' : is not explicitly declared as abstract but has abstract functions|[/W3 C4570][] clr|-|-|
 |Informational: catch(...) semantics changed since Visual C++ 7.1; structured exceptions (SEH) are no longer caught|[/W4 C4571][]|-|-|
 |[ParamArray] attribute is deprecated under /clr, use '...' instead|[/W1 C4572][] clr|-|-|
+|the usage of 'lambda function' requires the compiler to capture 'this' but the current default capture mode does not allow it|[/W1 C4573][]|
+|'Identifier' is defined to be '0': did you mean to use '#if identifier'?|[/W4 C4574][]|
+|'__vectorcall' incompatible with the '/clr' option: converting to '__stdcall'|[/W1 C4575][]|-|-|
 |'noexcept' used with no exception handling mode specified; termination on exception is not guaranteed. Specify /EHsc|[/W1 C4577][]|
 |[attribute] is deprecated; instead specify System::Attribute or Platform::Metadata as a base class|[/W3 C4580][] clr|-|-|
 |deprecated behavior: '"string1"' replaced with 'string2' to process attribute|[/W1 C4581][]|-|-|
 |'class1' : base-class 'class2' is already a base-class of 'class3'|[/W1 C4584][]|-Winaccessible-base|[-Winaccessible-base](https://wandbox.org/permlink/A5gzOVfFAaQhXrjw)|direct base 'A' is inaccessible due to ambiguity|:ballot_box_with_check:|
 |'name': illegal qualified name in member declaration|[/W4 C4596][]|error|[error](https://wandbox.org/permlink/fzUuSIMQ5Njur47r)|
+|undefined behavior: offsetof applied to a member of a virtual base|[error C4597][]|||
+|'#include "header"': header number number in the precompiled header does not match current compilation at that position|[/W1,3 C4598][]||
+|'flag path': command line argument number number does not match precompiled header|[/W3 C4599][]|
 
 ## VS C4600-C4799
 
@@ -1026,6 +1039,7 @@ Obsolete: This warning is not generated by Visual Studio 2017 and later versions
 [/W4 C4505]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-4-c4505?view=vs-2019
 [/W1 C4506]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4506?view=vs-2019
 [/W1 C4508]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4508?view=vs-2019
+[C4509]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
 [/W4 C4510]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-4-c4510?view=vs-2019
 [/W3 C4511]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-3-c4511?view=vs-2019
 [/W4 C4512]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-4-c4512?view=vs-2019
@@ -1035,11 +1049,13 @@ Obsolete: This warning is not generated by Visual Studio 2017 and later versions
 [/W4 C4516]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-4-c4516?view=vs-2019
 [/W4 C4517]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-4-c4517?view=vs-2019
 [/W1 C4518]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4518?view=vs-2019
+[error C4519]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
 [/W3 C4521]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-3-c4521?view=vs-2019
 [/W3 C4522]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-3-c4522?view=vs-2019
 [/W3 C4523]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-3-c4523?view=vs-2019
 [/W1 C4526]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4526?view=vs-2019
 [/W1 C4530]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4530?view=vs-2019
+[/W1 C4531]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
 [/W1 C4532]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4532?view=vs-2019
 [/W1 C4533]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4533?view=vs-2019
 [/W3 C4534]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-3-c4534?view=vs-2019
@@ -1049,6 +1065,7 @@ Obsolete: This warning is not generated by Visual Studio 2017 and later versions
 [/W3 C4538]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-3-c4538?view=vs-2019
 [/W1 C4540]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4540?view=vs-2019
 [/W1 C4541]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4541?view=vs-2019
+[/W1 C4542]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
 [/W3 C4543]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-3-c4543?view=vs-2019
 [/W1 C4544]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4544?view=vs-2019
 [/W1 C4545]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4545?view=vs-2019
@@ -1067,17 +1084,27 @@ Obsolete: This warning is not generated by Visual Studio 2017 and later versions
 [/W1 C4558]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4558?view=vs-2019
 [/W4 C4559]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-4-c4559?view=vs-2019
 [/W1 C4561]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4561?view=vs-2019
+[/W4 C4562]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
 [/W4 C4564]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-4-c4564?view=vs-2019
 [/W4 C4565]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-4-c4565?view=vs-2019
 [/W1 C4566]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4566?view=vs-2019
+[/W1 C4568]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
+[/W3 C4569]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
 [/W3 C4570]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-3-c4570?view=vs-2019
 [/W4 C4571]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-4-c4571?view=vs-2019
 [/W1 C4572]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4572?view=vs-2019
+[/W1 C4573]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
+[/W4 C4574]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
+[/W1 C4575]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
+[/W1 C4576, error]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
 [/W1 C4577]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4577?view=vs-2019
 [/W3 C4580]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-3-c4580?view=vs-2019
 [/W1 C4581]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4581?view=vs-2019
 [/W1 C4584]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4584?view=vs-2019
 [/W4 C4596]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/c4596?view=vs-2019
+[error C4597]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
+[/W1,3 C4598]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
+[/W3 C4599]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
 
 [/W1 C4600]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4600?view=vs-2019
 [/W1 C4602]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4602?view=vs-2019
