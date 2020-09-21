@@ -57,7 +57,9 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 | -         | -Wconversion              |           | [-Wconstant-conversion][]          | /W2   | C4309 |
 |           | -Wint-to-void-pointer-cast|           | [-Wint-to-void-pointer-cast][]     | /W1   | C4312 |
 |           | -Wformat                  |           | [-Wformat][]                       | /W1   | C4313, C4473, C4477 |
+|           | -Wformat                  |           | [-Wformat][]                       | /W3   | C4475, C4476 |
 |           | -Wformat-extra-args       |           | [-Wformat-extra-args][]            | /W1   | C4317 |
+|           | -Wformat-extra-args       |           | [-Wformat-extra-args][]            | /W3   | C4474 |
 |           | -Wmemset-transposed-args  |           | [-Wmemset-transposed-args][]       |       | C4318 |
 |           | -Wempty-body              |           | [-Wempty-body][]                   | /W3   | C4390 |
 |           | warning                   |           | [-Wmissing-declarations][]         | /W4   | C4408 |

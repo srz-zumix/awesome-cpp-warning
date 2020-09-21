@@ -334,7 +334,19 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |illegal size for operand|[/W1 C4410][]|||
 |'identifier' : symbol resolves to displacement register|[/W1 C4411][]|
 |'function' : function signature contains type 'type'; C++ objects are unsafe to pass between pure code and mixed or native.|[/W2 C4412][]|-|-|
+|'classname::member': reference member is initialized to a temporary that doesn't persist after the constructor exits|[C4413][]|
 |'function' : short jump to function converted to near|[/W3 C4414][]|-|-|
+|duplicate __declspec(code_seg('name'))|[/W1 C4416][]|-|-|
+|__declspec(code_seg(...)) contains empty string: ignored|[/W1 C4416][]|-|-|
+|an explicit template instantiation cannot have __declspec(code_seg(...)): ignored|[/W1 C4417][]|-|-|
+|__declspec(code_seg(...)) ignored on an enum|[/W1 C4418][]|-|-|
+|'symbol' has no effect when applied to private ref class 'class'.|[/W3 C4419][]|-|-|
+|'parameter': a reference parameter on a resumable function is potentially unsafe|[/W3 C4421][]|||
+|std::bad_alloc': will be caught by class ('type') on line number|[/W3 C4423][]|||
+|A SAL annotation cannot be applied to '...'|[/W1 C4425][]|-|-|
+|'operator': overflow in constant division, undefined behavior|[/W1 C4427][]|wip|wip|
+|optimization flags changed after including header, may be due to #pragma optimize()|[/W1 C4426][]|-|-|
+|catch for 'type1' preceded by 'type2' on line number; unpredictable behavior may result if 'std::bad_alloc' is thrown|[/W3 C4424][]|||
 |'operator' : operator not available, using 'operator' instead; run-time checking may be compromised|[/W1 C4420][]|
 |possible incomplete or improperly formed universal-character-name|[/W4 C4429][]|[error](https://wandbox.org/permlink/pIBgQjbAXBbpIY35)|[-Wunicode](https://wandbox.org/permlink/GPxeMy17a3L2yibh)|\u used with no following hex digits; treating as '\' followed by identifier|:ballot_box_with_check:|
 |missing type specifier - int assumed. Note: C++ does not support default-int|[error C4430][]|error|error|
@@ -342,11 +354,24 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |a class constructor must have private accessibility; changing to private access|[/W4 C4334][] clr|-|-|
 |'class1' : Object layout under /vd2 will change due to virtual base 'class2'|[/W4 C4435][]|-|-|
 |dynamic_cast from virtual base 'class1' to 'class2' in constructor or destructor could fail with partially-constructed object Compile with /vd2 or define 'class2' with #pragma vtordisp(2) in effect|[/W1 C4436][]|-|-|
-|dynamic_cast from virtual base 'class1' to 'class2' could fail in some contexts Compile with /vd2 or define 'class2' with #pragma vtordisp(2) in effect|[/W4 C4437][]|-|-|
+|dynamic_cast from virtual base 'class1' to 'class2' could fail in some contexts Compile with /vd2 or define 'class2' with #pragma vtordisp(2) in effect|[/W4 C4437][]|-|-|[C4438][]|-|-|
 |'function' : function definition with a managed type in the signature must have a __clrcall calling convention|[C4439][] clr|-|-|
 |calling convention redefinition from 'calling_convention1' to 'calling_convention2' ignored|[/W1 C4440][] clr|-|-|
 |calling convention of 'cc1' ignored; 'cc2' used instead|[/W1 C4441][] clr|-|-|
+|embedded null terminator in __annotation argument. Value will be truncated.|[/W1 C4442][]|
+|expected pragma parameter to be '0', '1', or '2'|[/W1 C4443][]||
+|identifier': top level '__unaligned' is not implemented in this context|[/W3 C4444][]|
 |'function' : in a WinRT or managed type a virtual method cannot be private|[/W1 C4445][]|||
+|'type': cannot map member 'name1' into this type, due to conflict with the type name. The method was renamed to 'name2'|[/W1 C4446][]|||
+|'main' signature found without threading model. Consider using 'int main(Platform::Array<Platform::String^>^ args)'.|[/W1 C4447][]|-|-|
+|'type1' does not have a default interface specified in metadata. Picking: 'type2', which may fail at runtime.|[C4448][]|
+|'type' an unsealed type should be marked as '[WebHostHidden]'|[C4449][]|-|-|
+|'type1' should be marked as '[WebHostHidden]' because it derives from 'type2'|[C4450][]|-|-|
+|'classname1::member': Usage of ref class 'classname2::member' inside this context can lead to invalid marshaling of object across contexts|[/W4 C4451][]|
+|'identifier': public type cannot be at global scope. It must be in a namespace that is a child of the name of the output .winmd file.|[/W1 C4452][]|-|-|
+|'type': A '[WebHostHidden]' type should not be used on the published surface of a public type that is not '[WebHostHidden]'|[/W1 C4453][]|-|-|
+|'function' is overloaded by more than the number of input parameters without having [DefaultOverload] specified. Picking 'declaration' as the default overload|[/W1 C4454][]|-|-|
+|'operator operator': literal suffix identifiers that do not start with an underscore are reserved|[/W1 C4455][]|wip|wip|
 |declaration of 'identifier' hides previous local declaration|[/W4 C4456][]|-Wshadow|[-Wshadow](https://wandbox.org/permlink/aFyQBg6xvJ4oYPay)|declaration shadows a local variable|:ballot_box_with_check:|
 |declaration of 'identifier' hides function parameter|[/W4 C4457][]|-Wshadow|[-Wshadow](https://wandbox.org/permlink/6zEYGXyD6YzXSNmJ)|declaration shadows a local variable|:ballot_box_with_check:|
 |declaration of 'identifier' hides class member|[/W4 C4458][]|-Wshadow|[-Wshadow](https://wandbox.org/permlink/BV4OXEezE53atk5k)|declaration shadows a local variable|:ballot_box_with_check:|
@@ -358,9 +383,17 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |relative include path contains '..'|[/W4 C4464][]|NOWARN|[NOWARN](https://wandbox.org/permlink/tKxH1dVNonL8toEE)|
 |floating-point control pragmas ignored under /clr|[/W1 C4470][] clr|-|-|
 |'enumeration': a forward declaration of an unscoped enumeration must have an underlying type (int assumed)|[/W4 C4471][]|error|[error](https://wandbox.org/permlink/7kUW2hDqW3uZ3THL)|
-|'function' : not enough arguments passed for format string placeholders and their parameters expect number variadic arguments, but number were provided the missing variadic argument index is required by format string 'format_string' this argument is used by a conversion specifier this argument is used as a field width|[/W1 C4473][]|-Wformat|[-Wformat](https://wandbox.org/permlink/QjuUTB68tehcYCZ4)|more '%' conversions than data arguments |:ballot_box_with_check:|
-|'function' : format string 'string' requires an argument of type 'type', but variadic argument number has type 'type'|[/W1 C4477][]|-Wformat|[-Wformat](https://wandbox.org/permlink/1oKU2BTdZcZAyurp)|format specifies type 'int' but the argument has type 'float' [-Wformat]|:ballot_box_with_check:|
+|'identifier' is a native enum: add an access specifier (private/public) to declare a 'WinRT|managed' enum|[/W1 C4472][]|-|-|
+|'function' : not enough arguments passed for format string placeholders and their parameters expect number variadic arguments, but number were provided the missing variadic argument index is required by format string 'format_string' this argument is used by a conversion specifier this argument is used as a field width|[/W1 C4473][]|-Wformat|[-Wformat](https://wandbox.org/permlink/QjuUTB68tehcYCZ4)|more '%' conversions than data arguments|:ballot_box_with_check:|
+|'function' : too many arguments passed for format string|[/W3 C4474][]|-Wformat-extra-args|[-Wformat-extra-args](https://wandbox.org/permlink/XziJNrRks1M7L1rk)|fdata argument not used by format string|:ballot_box_with_check:|
+|'function' : length modifier 'modifier' cannot be used with type field character 'character' in format specifier|[/W3 C4475][]|-Wformat|[-Wformat](https://wandbox.org/permlink/8GL0mdv59Lm3Am7j)|length modifier 'h' results in undefined behavior or no effect with 'f' conversion specifier|:ballot_box_with_check:|
+|'function' : unknown type field character 'character' in format specifier|[/W3 C4476][]|-Wformat|[-Wformat](https://wandbox.org/permlink/ZSRL7w0u3vw6fc1u)|format specifies type '_TYPE_' but the argument has type '_TYPE_'|:ballot_box_with_check:|
+|'function' : format string 'string' requires an argument of type 'type', but variadic argument number has type 'type'|[/W1 C4477][]|-Wformat|[-Wformat](https://wandbox.org/permlink/1oKU2BTdZcZAyurp)|format specifies type '_TYPE_' but the argument has type '_TYPE_'|:ballot_box_with_check:|
+|'function' : positional and non-positional placeholders cannot be mixed in the same format string|[/W1 C4478][]|-|-|
+|nonstandard extension used: specifying underlying type for enum 'enumeration'|[error C4480][]|
 |nonstandard extension used: override specifier 'keyword'|[/W4 C4481][]|-|-|
+|nonstandard extension used: enum 'enumeration' used in qualified name|[C4482][]|
+|syntax error: expected C++ keyword|[/W1 C4483, error][]||
 |'override_function' : matches base ref class method 'base_class_function', but is not marked 'virtual', 'new' or 'override'; 'new' (and not 'virtual') is assumed|[C4484][]|-|-|
 |'override_function' : matches base ref class method 'base_class_function ', but is not marked 'new' or 'override'; 'new' (and 'virtual') is assumed|[C4485][] clr|-|-|
 |'function' : a private virtual method of a ref class or value class should be marked 'sealed'|[/W1 C4486][]|-|-|
@@ -368,6 +401,15 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |'function' : requires 'keyword' keyword to implement the interface method 'interface_method'|[/W1 C4488][] clr|-|-|
 |'specifier' : not allowed on interface method 'method'; override specifiers are only allowed on ref class and value class methods|[/W1 C4489][] clr|-|-|
 |'override' : incorrect use of override specifier; 'function' does not match a base ref class method|[/W1 C4490][] clr|-|-|
+|'name': has an illegal IDL version format|[/W1 C4491][]|-|-|
+|'function1': matches base ref class method 'function2', but is not marked 'override'|[/W1 C4492, error][]|-|-|
+|delete expression has no effect as the destructor of 'type' does not have 'public' accessibility|[/W1 C4493, error][]|-|-|
+|'function' : Ignoring __declspec(allocator) because the function return type is not a pointer or reference|[/W1 C4494][]|-|-|
+|nonstandard extension '__super' used: replace with explicit base class name|[C4495][]|-|-|
+|nonstandard extension 'for each' used: replace with ranged-for statement|[C4496][]|-|-|
+|nonstandard extension 'sealed' used: replace with 'final'|[C4497][]|-|-|
+|nonstandard extension used: 'extension'|[C4498][]|-|-|
+|'function' : an explicit specialization cannot have a storage class (ignored)"|[/W4 C4499][]|wip|wip|
 |'linkage specification' requires use of keyword 'extern' and must precede all other specifiers|[/W1 C4502][]||
 |'identifier' : decorated name length exceeded, name was truncated|[/W1 C4503][]|NOWARN|[NOWARN](https://wandbox.org/permlink/WiyBZZZNs4UqG71L)|
 |'function' : unreferenced local function has been removed|[/W4 C4505][]||
@@ -901,8 +943,20 @@ Obsolete: This warning is not generated by Visual Studio 2017 and later versions
 [/W1 C4410]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4410?view=vs-2019
 [/W1 C4411]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4411?view=vs-2019
 [/W2 C4412]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-2-c4412?view=vs-2019
+[C4413]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
 [/W3 C4414]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-3-c4414?view=vs-2019
+[/W1 C4415]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
+[/W1 C4416]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
+[/W1 C4417]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
+[/W1 C4418]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
+[/W3 C4419]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
 [/W1 C4420]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4420?view=vs-2019
+[/W3 C4421]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
+[/W3 C4423]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
+[/W3 C4424]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
+[/W1 C4425]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
+[/W1 C4426]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
+[/W1 C4427]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
 [/W4 C4429]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-4-c4429?view=vs-2019
 [C4430]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-c4430?view=vs-2019
 [/W4 C4431]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-4-c4431?view=vs-2019
@@ -910,10 +964,24 @@ Obsolete: This warning is not generated by Visual Studio 2017 and later versions
 [/W4 C4435]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-4-c4435?view=vs-2019
 [/W1 C4436]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4436?view=vs-2019
 [/W4 C4437]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-4-c4437?view=vs-2019
+[C4438]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
 [C4439]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-c4439?view=vs-2019
 [/W1 C4440]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4440?view=vs-2019
 [/W1 C4441]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4441?view=vs-2019
+[/W1 C4442]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
+[/W1 C4443]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
+[/W3 C4444]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
 [/W1 C4445]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4445?view=vs-2019
+[/W1 C4446]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
+[/W1 C4447]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
+[C4448]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
+[C4449]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
+[C4450]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
+[/W4 C4451]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
+[/W1 C4452]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
+[/W1 C4453]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
+[/W1 C4454]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
+[/W1 C4455]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
 [/W4 C4456]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-4-c4456?view=vs-2019
 [/W4 C4457]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-4-c4457?view=vs-2019
 [/W4 C4458]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-4-c4458?view=vs-2019
@@ -925,9 +993,17 @@ Obsolete: This warning is not generated by Visual Studio 2017 and later versions
 [/W4 C4464]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/c4464?view=vs-2019
 [/W1 C4470]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4470?view=vs-2019
 [/W4 C4471]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-4-c4471?view=vs-2019
+[/W1 C4472]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
 [/W1 C4473]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/c4473?view=vs-2019
+[/W3 C4474]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
+[/W3 C4475]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
+[/W3 C4476]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
 [/W1 C4477]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/c4477?view=vs-2019
+[/W1 C4478]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
+[error C4480]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
 [/W4 C4481]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-4-c4481?view=vs-2019
+[C4482]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
+[/W1 C4483, error]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
 [C4484]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-c4484?view=vs-2019
 [C4485]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-c4485?view=vs-2019
 [/W1 C4486]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4486?view=vs-2019
@@ -935,6 +1011,15 @@ Obsolete: This warning is not generated by Visual Studio 2017 and later versions
 [/W1 C4488]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4488?view=vs-2019
 [/W1 C4489]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4489?view=vs-2019
 [/W1 C4490]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4490?view=vs-2019
+[/W1 C4491]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
+[/W1 C4492, error]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
+[/W1 C4493, error]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
+[/W1 C4494]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
+[C4495]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
+[C4496]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
+[C4497]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
+[C4498]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
+[/W4 C4499]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4400-through-c4599?view=vs-2019
 
 [/W1 C4502]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4502?view=vs-2019
 [/W1 C4503]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4503?view=vs-2019
