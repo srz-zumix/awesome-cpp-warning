@@ -117,7 +117,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 [-Wignored-qualifiers]:https://wandbox.org/permlink/eCGVd8s2oBd7tqGi
 [-Wimplicit-float-conversion]:https://wandbox.org/permlink/mlDb0iY7nmCfWsLa
 [-Wimplicit-int-conversion]:https://wandbox.org/permlink/jw7P7K3ei05sCgmM
-[-Winaccessible-base]:https://wandbox.org/permlink/A5gzOVfFAaQhXrjw)
+[-Winaccessible-base]:https://wandbox.org/permlink/A5gzOVfFAaQhXrjw
 [-Winfinite-recursion]:https://wandbox.org/permlink/RlZOz4cCTGLWpeFL
 [-Winteger-overflow]:https://wandbox.org/permlink/5CFSu1o33qOFG8Hr
 [-Wmacro-redefined]:https://wandbox.org/permlink/FeN9eryQ6AjJtPm1
@@ -148,7 +148,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 [-Wswitch]:https://wandbox.org/permlink/X14xNQbbxmgU1W2f
 [-Wswitch-bool]:https://wandbox.org/permlink/vL1ObRTKd8d0hkOR
 [-Wswitch-enum]:https://wandbox.org/permlink/PUm5ULD8MXDnpoye
-[-Wtautological-compare]:https://wandbox.org/permlink/Y7SS3gQJXDkicCwI)
+[-Wtautological-compare]:https://wandbox.org/permlink/Y7SS3gQJXDkicCwI
 [-Wtautological-unsigned-zero-compare]:https://wandbox.org/permlink/oMzIhOyrkFxlUsi0
 [-Wtype-limits]:https://wandbox.org/permlink/8naEWNJet3GNbWpV
 [-Wundef]:https://wandbox.org/permlink/jGR75x8PNLTi3dfB
