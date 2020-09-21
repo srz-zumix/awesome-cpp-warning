@@ -34,7 +34,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |           |                           |           | [-Wswitch-bool][]                  | /W1   | C4144, C4145 |
 |           | -Wdelete-incomplete       |           | [-Wdelete-incomplete][]            | /W2   | C4150 |
 |           | [-Wreturn-local-addr][]   |           | [-Wreturn-stack-address][]         | /W1   | C4172 |
-| error     | [-Wnarrowing][]           | error     | [-Wc++11-narrowing][]              | /W1   | C4178 |
+|           | [-Wnarrowing][]           | error     | [-Wc++11-narrowing][]              | /W1   | C4178, C4838 |
 |           |                           |           | [-Wignored-qualifiers][]           | /W1   | C4180 |
 |           | -Wignored-qualifiers      |           |                                    | /W3   | C4197 |
 |           |                           |           | [-Wreturn-type-c-linkage][]        | /W1   | C4190 |
@@ -67,6 +67,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 | -         | -Wshadow                  | -         | [-Wshadow][]                       | /W4   | C4456, C4457, C4458, C4459 |
 |           |                           |           | [-Wbitfield-constant-conversion][] | /W4   | C4463 |
 |           | -Waddress                 |           | [-Wcomma][]                        | /W1   | C4545, C4546 |
+|           |                           |           | [-Wcomma][]                        | /W4   | C4913 |
 |           | [-Wtautological-compare][]|           | [-Wunused-comparison][]            | /W1   | C4547 |
 |           | -Wunused-value            |           | [-Wunused-comparison][]            | /W1   | C4549, C4553 |
 |           | -Wunused-value            |           | [-Wunused-value][]                 | /W1   | C4548, C4552, C4555 |
@@ -86,6 +87,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |           | -Wdiv-by-zero             |           | [-Wdivision-by-zero][]             | /W3   | C4723, C4274 |
 |           |                           |           | [-Wcast-align][]                   | /W1   | C4739 |
 |           |                           |           | [-Wfortify-source][]               | /W1   | C4789 |
+|           | -Wbool-compare            |           | [-Wtautological-constant-out-of-range-compare][] | /W1 | C4806 |
 |           | -Wconversion-null         |           | [-Wnull-conversion][]              | | |
 |           | -Wdangling-else           |           | [-Wdangling-else][]                | | |
 
@@ -148,6 +150,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 [-Wswitch]:https://wandbox.org/permlink/X14xNQbbxmgU1W2f
 [-Wswitch-bool]:https://wandbox.org/permlink/vL1ObRTKd8d0hkOR
 [-Wswitch-enum]:https://wandbox.org/permlink/PUm5ULD8MXDnpoye
+[-Wtautological-constant-out-of-range-compare]:https://wandbox.org/permlink/5JWWi1sh4UzxlbaH
 [-Wtautological-compare]:https://wandbox.org/permlink/Y7SS3gQJXDkicCwI
 [-Wtautological-unsigned-zero-compare]:https://wandbox.org/permlink/oMzIhOyrkFxlUsi0
 [-Wtype-limits]:https://wandbox.org/permlink/8naEWNJet3GNbWpV

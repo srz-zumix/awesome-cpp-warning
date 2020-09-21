@@ -605,7 +605,42 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |:---|:--:|:--:|:--:|:--|:--|
 |Implicit conversion from 'type' to bool. Possible information loss|[/W4 C4800][]|[-Wdeprecated](https://wandbox.org/permlink/7WPm3AtsK9MNJQzM)|[-Wdeprecated-increment-bool](https://wandbox.org/permlink/nN08ecy8eyAaR7IN)|incrementing expression of type bool is deprecated and incompatible with C++17|:ballot_box_with_check:|
 |'method' : the raise method has a different storage class from that of the event, 'event'|[/W1 C4803][]|-|-|
-
+|'operation' : unsafe use of type 'bool' in operation|[/W1 C4804][]|NOWARN|[NOWARN](https://wandbox.org/permlink/4vss23MG2OSbzl4S)|
+|'operation' : unsafe mix of type 'type' and type 'type' in operation|[/W1 C4805][]|NOWARN|[NOWARN](https://wandbox.org/permlink/7yRgHauQ4kNl6CJ5)|
+|'operation' : unsafe operation: no value of type 'type' promoted to type 'type' can equal the given constant|[/W1 C4806][]|[-Wbool-compare](https://wandbox.org/permlink/Cj6BgyKdWExnaMhS)|[-Wtautological-constant-out-of-range-compare](https://wandbox.org/permlink/5JWWi1sh4UzxlbaH)|result of comparison of constant 3 with expression of type 'bool' is always false|:ballot_box_with_check:|
+|'operation' : unsafe mix of type 'type' and signed bitfield of type 'type'|[/W1 C4807][]|NOWARN|[NOWARN](https://wandbox.org/permlink/oqgvOPeGOYjWaRNW)||
+|value of pragma pack(show) == n|[/W1 C4810][]|-|-||
+|value of pragma conform(forScope, show) == value|[/W1 C4811][]|-|-||
+|obsolete declaration style: please use 'new_syntax' instead|[/W1 C4812][]|error|[error](https://wandbox.org/permlink/x4vAOcTCYIKf0rjD)|
+|'function' : a friend function of a local class must have been previously declared|[/W1 C4813][]|error|[error](https://wandbox.org/permlink/abdGrY0V4t07FXkS)|no matching function found in local scope|
+|'param' : parameter has a zero-sized array which will be truncated (unless the object is passed by reference)|[/W4 C4816][]|NOWARN|[NOWARN](https://wandbox.org/permlink/HBLdGrDTCoei3V4g)||
+|'member' : illegal use of '.' to access this member; compiler replaced with '->'|[/W1 C4817][]|-|-|
+|The file contains a character that cannot be represented in the current code page (number). Save the file in Unicode format to prevent data loss.|[/W1 C4819][]|
+|'bytes' bytes padding added after construct 'member_name'|[/W4 C4820][]|-|-|
+|Unable to determine Unicode encoding type, please save the file with signature (BOM)|[/W1 C4821][]||
+|'member' : local class member function does not have a body|[/W1 C4822][]|NOWARN|[NOWARN](https://wandbox.org/permlink/gyJseARnVzJw8IF7)|
+|'function' : uses pinning pointers but unwind semantics are not enabled. Consider using /EHa|[/W3 C4823][]|-|-|
+|Possibly incorrect parameters to function main. Consider 'intmain(Platform::Array<Platform::String^>^ argv)'|[/W1 C4829][]|-|-|
+|'variable' : the initializer for exported data will not be run until managed code is first executed in the host assembly|[/W1 C4835][]|-|-|
+|conversion from 'type_1' to 'type_2' requires a narrowing conversion|[/W1 C4838][]|[-Wnarrowing](https://wandbox.org/permlink/zogsQgYsmQWPBSkm)|[-Wc++11-narrowing](https://wandbox.org/permlink/hrSp3Yj0D1hUmxUN)|type 'double' cannot be narrowed to 'int' in initializer list|:ballot_box_with_check:|
+|non-standard use of class 'type' as an argument to a variadic function|error|[error](https://wandbox.org/permlink/RqkgPxgwUqlthOhg)||
+|non-portable use of class 'type' as an argument to a variadic function|[NOWARN](https://wandbox.org/permlink/47bGx4Q0RYzNzaJj)|[error (-Wnon-pod-varargs)](https://wandbox.org/permlink/ojqGkOSFmfaC5cB7)|cannot pass non-trivial object of type '_TYPE_' to variadic function; expected type from format string was '_TYPE_'|
+|'file(line_number)' compiler may not enforce left-to-right evaluation order for call to operator_name|[/W4 C4866][]|
+|'function': function call missing argument list; use 'call' to create a pointer to member|[C4867][]|error|[error](https://wandbox.org/permlink/WwDIpVP1NxKvROF0)|
+|'file(line_number)' compiler may not enforce left-to-right evaluation order in braced initializer list|[C4868][]|NOWARN|[NOWARN](https://wandbox.org/permlink/I9wueH5mKy8uCYpB)||
+|intermediate language mismatch between 'tool1' version 'version1' and 'tool2' version 'version2'|[/W1 C4900][]|
+|wide string literal cast to 'LPSTR'|[/W1 C4905][]|-|-|
+|string literal cast to 'LPWSTR'|[/W1 C4906][]|-|-|
+|'<identifier>' : '__declspec(dllexport)' and 'extern' are incompatible on an explicit instantiation|[/W1 C4910][]|-|-|
+|'attribute': attribute has undefined behavior on a nested UDT|[/W1 C4912][]|-|-|
+|user defined binary operator ',' exists but no overload could convert all operands, default built-in binary operator ',' used|[/W4 C4913][]|NOWARN|[-Wcomma](https://wandbox.org/permlink/kwkm9JUd9fT8pmex)|possible misuse of comma operator here|:ballot_box_with_check:|
+|'declarator' : a GUID can only be associated with a class, interface or namespace|[/W1 C4917][]|-|-|
+|'character' : invalid character in pragma optimization list|[/W4 C4918][]|-|-|
+|enum enum member member=value already seen in enum enum as member=value|[/W1 C4920][]|-|-|
+|'method': dispinterface method cannot be called from script|[/W1 C4925][]|-|-|
+|'identifier': symbol is already defined: attributes ignored|[/W1 C4926][]|-|-|
+|illegal conversion; more than one user-defined conversion has been implicitly applied|[/W1 C4927][]|error|[error](https://wandbox.org/permlink/65cRWCslsXQBSdTU)||
+|illegal copy-initialization; more than one user-defined conversion has been implicitly applied|[/W1 C4928][]|error|[error](https://wandbox.org/permlink/4wtzlkSvH5b1ChPW)|
 
 ## no VS
 
@@ -1175,6 +1210,7 @@ Obsolete: This warning is not generated by Visual Studio 2017 and later versions
 [/W1 C4692]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4692?view=vs-2019
 [C4693]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-c4693?view=vs-2019
 [C4694]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-c4694?view=vs-2019
+
 [/W1,4 C4700]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-and-level-4-c4700?view=vs-2019
 [/W4 C4701]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-4-c4701?view=vs-2019
 [/W4 C4702]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-4-c4702?view=vs-2019
@@ -1216,5 +1252,42 @@ Obsolete: This warning is not generated by Visual Studio 2017 and later versions
 [/W1,3 C4793]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-and-3-c4793?view=vs-2019
 [/W1 C4794]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4794?view=vs-2019
 [/W1 C4799]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4799?view=vs-2019
+
 [/W4 C4800]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-3-c4800?view=vs-2019
 [/W1 C4803]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4803?view=vs-2019
+[/W1 C4804]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4804?view=vs-2019
+[/W1 C4805]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4805?view=vs-2019
+[/W1 C4806]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4806?view=vs-2019
+[/W1 C4807]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4807?view=vs-2019
+[/W1 C4810]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4810?view=vs-2019
+[/W1 C4811]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4811?view=vs-2019
+[/W1 C4812]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4812?view=vs-2019
+[/W1 C4813]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4813?view=vs-2019
+[/W4 C4816]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-4-c4816?view=vs-2019
+[/W1 C4817]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4817?view=vs-2019
+[/W1 C4819]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4819?view=vs-2019
+[/W4 C4820]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-4-c4820?view=vs-2019
+[/W1 C4821]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4821?view=vs-2019
+[/W1 C4822]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4822?view=vs-2019
+[/W3 C4823]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-3-c4823?view=vs-2019
+[/W1 C4829]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4829?view=vs-2019
+[/W1 C4835]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4835?view=vs-2019
+[/W1 C4838]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4838?view=vs-2019
+[/W3 C4839]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-3-c4839?view=vs-2019
+[/W4 C4840]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-4-c4840?view=vs-2019
+[/W4 C4866]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/c4866?view=vs-2019
+[C4867]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-c4867?view=vs-2019
+[C4868]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-c4868?view=vs-2019
+[/W1 C4900]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4900?view=vs-2019
+[/W1 C4905]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4905?view=vs-2019
+[/W1 C4906]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4906?view=vs-2019
+[/W1 C4910]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4910?view=vs-2019
+[/W1 C4912]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4912?view=vs-2019
+[/W4 C4913]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-4-c4913?view=vs-2019
+[/W1 C4917]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4917?view=vs-2019
+[/W4 C4918]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-4-c4918?view=vs-2019
+[/W1 C4920]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4920?view=vs-2019
+[/W1 C4925]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4925?view=vs-2019
+[/W1 C4926]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4926?view=vs-2019
+[/W1 C4927]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4927?view=vs-2019
+[/W1 C4928]:https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4928?view=vs-2019
