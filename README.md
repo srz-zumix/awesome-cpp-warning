@@ -64,8 +64,14 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |           | error                     |           | [-Wunicode][]                      | /W4   | C4429 |
 | -         | -Wshadow                  | -         | [-Wshadow][]                       | /W4   | C4456, C4457, C4458, C4459 |
 |           |                           |           | [-Wbitfield-constant-conversion][] | /W4   | C4463 |
-|           | (-Waddress)               |           | [-Wcomma][]                        | /W1   | C4545, C4546 |
+|           | -Waddress                 |           | [-Wcomma][]                        | /W1   | C4545, C4546 |
 |           | [-Wtautological-compare][]|           | [-Wunused-comparison][]            | /W1   | C4547 |
+|           | -Wunused-value            |           | [-Wunused-comparison][]            | /W1   | C4549, C4553 |
+|           | -Wunused-value            |           | [-Wunused-value][]                 | /W1   | C4548, C4552, C4555 |
+|           | -Wunused-value (-Waddress)|           | [-Wunused-value][]                 | /W1   | C4551 |
+|           | -Wparentheses             |           | [-Wshift-op-parentheses][]         | /W3   | C4554 |
+|           | [-Wmultichar][]           |           | error                              | /W1   | C4566 |
+|           | -Winaccessible-base       |           | [-Winaccessible-base][]            | /W1   | C4584 |
 | -         | -Wundef                   | -         | [-Wundef][]                        | /W4   | C4668 |
 |           | -Wuninitialized           |           | [-Wuninitialized][]                | /W1,4 | C4700 |
 |           |                           |           | [-Wsometimes-uninitialized][]      | /W4   | C4701, C4703 |
@@ -109,12 +115,14 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 [-Wignored-qualifiers]:https://wandbox.org/permlink/eCGVd8s2oBd7tqGi
 [-Wimplicit-float-conversion]:https://wandbox.org/permlink/mlDb0iY7nmCfWsLa
 [-Wimplicit-int-conversion]:https://wandbox.org/permlink/jw7P7K3ei05sCgmM
+[-Winaccessible-base]:https://wandbox.org/permlink/A5gzOVfFAaQhXrjw)
 [-Winfinite-recursion]:https://wandbox.org/permlink/RlZOz4cCTGLWpeFL
 [-Winteger-overflow]:https://wandbox.org/permlink/5CFSu1o33qOFG8Hr
 [-Wmacro-redefined]:https://wandbox.org/permlink/FeN9eryQ6AjJtPm1
 [-Wmemset-transposed-args]:https://wandbox.org/permlink/DsZYpzhpjLn6Yer5
 [-Wmismatched-tags]:https://wandbox.org/permlink/a7KmDSJZeiKS8ICp
 [-Wmissing-declarations]:https://wandbox.org/permlink/rNlYQGT2lyhtNYU4
+[-Wmultichar]:https://wandbox.org/permlink/zFGKNIXEuswp8qrR
 [-Wnarrowing]:https://wandbox.org/permlink/38PevVKq6JDJbGEh
 [-Wnon-virtual-dtor]:https://wandbox.org/permlink/KeW1Px6KLH9WB9bz
 [-Wnull-conversion]:https://wandbox.org/permlink/ABZSxzM9XR0r1a4B
@@ -129,6 +137,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 [-Wreturn-type-c-linkage]:https://wandbox.org/permlink/SEWKt2JcLBnAdeZH
 [-Wshadow]:https://wandbox.org/permlink/aFyQBg6xvJ4oYPay
 [-Wshift-count-overflow]:https://wandbox.org/permlink/0c0V7KDrG6bzAelS
+[-Wshift-op-parentheses]:https://wandbox.org/permlink/amX76yhKYrTeGblb
 [-Wshorten-64-to-32]:https://wandbox.org/permlink/PV73kTvl4LkSOcQG
 [-Wsign-compare]:https://wandbox.org/permlink/fxZyhxNfIrukjAjs
 [-Wsign-conversion]:https://wandbox.org/permlink/nar9aUENFpL8ZlCq
@@ -149,6 +158,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 [-Wunused-comparison]:https://wandbox.org/permlink/zhaQHii56U35haMG
 [-Wunused-label]:https://wandbox.org/permlink/slCUpdY7trnfRtFU
 [-Wunused-parameter]:https://wandbox.org/permlink/Lg6HoqMG8MZGuvHp
+[-Wunused-value]:https://wandbox.org/permlink/vm2J5xlyxySBqWgz
 [-Wunused-variable]:https://wandbox.org/permlink/sZKVILFpyoQUnljb
 [-Wint-to-void-pointer-cast]:https://wandbox.org/permlink/ENteC23V5rCJNKBu
 [-Wzero-length-array]:https://wandbox.org/permlink/dCOhebgvxxv9adE5
