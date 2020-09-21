@@ -88,6 +88,12 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |           |                           |           | [-Wcast-align][]                   | /W1   | C4739 |
 |           |                           |           | [-Wfortify-source][]               | /W1   | C4789 |
 |           | -Wbool-compare            |           | [-Wtautological-constant-out-of-range-compare][] | /W1 | C4806 |
+|           |                           |           | [-Wvexing-parse][]                 | /W1   | C4930 |
+|           |                           |           | [-Wreinterpret-base-class][]       | /W1   | C4946 |
+|           | warning                   |           | [-Wc++17-extensions][]             |       | C4984 |
+|           | -Wdeprecated-declarations |           | [-Wdeprecated-declarations][]      | /W3   | C4996 |
+|           | -Wreorder                 |           | [-Wreorder-ctor][]                 |       | C5038 |
+|           | -Wexpansion-to-defined    |           | [-Wexpansion-to-defined][]         | /W1   | C5105 |
 |           | -Wconversion-null         |           | [-Wnull-conversion][]              | | |
 |           | -Wdangling-else           |           | [-Wdangling-else][]                | | |
 
@@ -95,6 +101,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 [-Wbitfield-constant-conversion]:https://wandbox.org/permlink/K3a0oFD1KHuA6B5n
 [-Wbuiltin-macro-redefined]:https://wandbox.org/permlink/fP8RAUGwYj4qsPfO
 [-Wc++11-narrowing]:https://wandbox.org/permlink/GCuBpZyoVaCLGYeU
+[-Wc++17-extensions]:https://wandbox.org/permlink/9pfAyZ5GNv6WTZxt
 [-Wcast-align]:https://wandbox.org/permlink/89DcTrPTtwLv3XKb
 [-Wcomma]:https://wandbox.org/permlink/T14XeAelFnxMHDlU
 [-Wcomma-subscript]:https://wandbox.org/permlink/aOaBTW9UwVfb9hfP
@@ -104,10 +111,12 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 [-Wdangling-else]:https://wandbox.org/permlink/GroeDOmm6CQWjxVV
 [-Wdelete-incomplete]:https://wandbox.org/permlink/K6r1Yfsu7n9bfGCk
 [-Wdeprecated-comma-subscript]:https://wandbox.org/permlink/mmD72OEmb9GsIEU1
+[-Wdeprecated-declarations]:https://wandbox.org/permlink/dBNHrMNwieFpDru9
 [-Wdivision-by-zero]:https://wandbox.org/permlink/0HhGfj6Vyya45bZT
 [-Wduplicate-decl-specifier]:https://wandbox.org/permlink/3j36NXx7PZRFSowX
 [-Wempty-body]:https://wandbox.org/permlink/G6Ts7ShpqVRBFK6J
 [-Wexceptions]:https://wandbox.org/permlink/hPSJuIMRT0tMXdhj
+[-Wexpansion-to-defined]:https://wandbox.org/permlink/eHT8F2Wo5RMZXgbC
 [-Wextra-semi-stmt]:https://wandbox.org/permlink/t2lN0EJnAuktq96r
 [-Wextra-tokens]:https://wandbox.org/permlink/GWAzROCAePlNDfxT
 [-Wfloat-conversion]:https://wandbox.org/permlink/DKO2n3JIUqlIbgrv
@@ -121,6 +130,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 [-Wimplicit-int-conversion]:https://wandbox.org/permlink/jw7P7K3ei05sCgmM
 [-Winaccessible-base]:https://wandbox.org/permlink/A5gzOVfFAaQhXrjw
 [-Winfinite-recursion]:https://wandbox.org/permlink/RlZOz4cCTGLWpeFL
+[-Wint-to-void-pointer-cast]:https://wandbox.org/permlink/ENteC23V5rCJNKBu
 [-Winteger-overflow]:https://wandbox.org/permlink/5CFSu1o33qOFG8Hr
 [-Wmacro-redefined]:https://wandbox.org/permlink/FeN9eryQ6AjJtPm1
 [-Wmemset-transposed-args]:https://wandbox.org/permlink/DsZYpzhpjLn6Yer5
@@ -135,6 +145,8 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 [-Woverloaded-virtual]:https://wandbox.org/permlink/ZAV9lUH5hRDbZZgv
 [-Wparentheses]:https://wandbox.org/permlink/0aY8EHsyCWoz93fa
 [-Wpragma-pack]:https://wandbox.org/permlink/ip1Ds0WQRxFwdQp4
+[-Wreinterpret-base-class]:https://wandbox.org/permlink/QBpE5D0NuXS8oHiH
+[-Wreorder-ctor]:https://wandbox.org/permlink/wF1sODcNFjIIfXQ0
 [-Wreturn-local-addr]:https://wandbox.org/permlink/pBWhp5u8AugJyQDD
 [-Wreturn-stack-address]:https://wandbox.org/permlink/LWuZrYzmknFgkHav
 [-Wreturn-type]:https://wandbox.org/permlink/l8AKsXFnsPgQtD5o
@@ -165,5 +177,5 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 [-Wunused-parameter]:https://wandbox.org/permlink/Lg6HoqMG8MZGuvHp
 [-Wunused-value]:https://wandbox.org/permlink/vm2J5xlyxySBqWgz
 [-Wunused-variable]:https://wandbox.org/permlink/sZKVILFpyoQUnljb
-[-Wint-to-void-pointer-cast]:https://wandbox.org/permlink/ENteC23V5rCJNKBu
+[-Wvexing-parse]:https://wandbox.org/permlink/VOOIavontGmvvYVE
 [-Wzero-length-array]:https://wandbox.org/permlink/dCOhebgvxxv9adE5
