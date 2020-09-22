@@ -96,9 +96,11 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |           | -Wdeprecated-declarations |           | [-Wdeprecated-declarations][]      | /W3   | C4996 |
 |           | -Wreorder                 |           | [-Wreorder-ctor][]                 |       | C5038 |
 |           | -Wexpansion-to-defined    |           | [-Wexpansion-to-defined][]         | /W1   | C5105 |
+|           |                           |           | [-Wabstract-final-class][]         | | |
 |           | -Wconversion-null         |           | [-Wnull-conversion][]              | | |
 |           | -Wdangling-else           |           | [-Wdangling-else][]                | | |
 
+[-Wabstract-final-class]:https://wandbox.org/permlink/r7k7wieaf2d9qbdJ
 [-Waddress]:https://wandbox.org/permlink/MQnCpnpN1HPmr7lz
 [-Wbitfield-constant-conversion]:https://wandbox.org/permlink/K3a0oFD1KHuA6B5n
 [-Wbuiltin-macro-redefined]:https://wandbox.org/permlink/fP8RAUGwYj4qsPfO

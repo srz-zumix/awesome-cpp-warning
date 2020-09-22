@@ -786,6 +786,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |:---|:--:|:--:|:--:|:--|:--|
 |int x = NULL;|-|[-Wconversion-null](https://wandbox.org/permlink/CKYlII9m0sW7PpOv)|[-Wnull-conversion](https://wandbox.org/permlink/ABZSxzM9XR0r1a4B)|implicit conversion of NULL constant to '_TYPE_'|
 |if .. else ..|-|[-Wdangling-else](https://wandbox.org/permlink/2dYFvxgWxBJSRdwN)|[-Wdangling-else](https://wandbox.org/permlink/GroeDOmm6CQWjxVV)|add explicit braces to avoid dangling else|
+||-|[NOWARN](https://wandbox.org/permlink/86egQA2SgiSWIaJK)|[-Wabstract-final-class](https://wandbox.org/permlink/r7k7wieaf2d9qbdJ)|abstract class is marked 'final'||
 
 ## Annotaion
 
