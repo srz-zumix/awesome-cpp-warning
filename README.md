@@ -1,8 +1,8 @@
-# cpp-warn-table
+# awesome-cpp-warning
 
 c++ warning correspondence table (Clang/GCC and Visual Studio)
 
-## VC++ List
+## VC++ Warning List
 
 [VC++ List](./VCLIST.md)
 
