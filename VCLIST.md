@@ -55,7 +55,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |enumerator 'identifier' in switch of enum 'enumeration' is not handled|[/W4 C4062][] [Off][]|-Wswitch|[-Wswitch](https://wandbox.org/permlink/X14xNQbbxmgU1W2f)|enumeration value '_NAME_' not handled in switch|:ballot_box_with_check:|
 |characters beyond first in wide-character constant ignored|[/W3 C4066][]||
 |unexpected tokens following preprocessor directive - expected a newline|[/W1 C4067][]|[error,warning,-Wendif-labels](https://wandbox.org/permlink/Ht27NdPvIYzkLU6s)|[error, -Wextra-tokens](https://wandbox.org/permlink/GWAzROCAePlNDfxT)|extra tokens at end of _TOKEN_ directive|:ballot_box_with_check:|
-|unknown pragma|[/W1 C4068][]|-Wunknown-pragmas|[-Wunknown-pragmas](https://wandbox.org/permlink/D8mn6FhQXORZBUkp)|unknown pragma ignored|:ballot_box_with_check|
+|unknown pragma|[/W1 C4068][]|-Wunknown-pragmas|[-Wunknown-pragmas](https://wandbox.org/permlink/D8mn6FhQXORZBUkp)|unknown pragma ignored|:ballot_box_with_check:|
 |long double is the same precision as double|[C4069][]|||
 |initializers put in library initialization area|[/W3 C4073][]|-Wunknown-pragmas|-Wunknown-pragmas||
 |initializers put in compiler reserved initialization area|[/W1 C4074][]|-Wunknown-pragmas|-Wunknown-pragmas||
@@ -152,7 +152,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |#pragma start_map_region cannot be nested; ignored|[C4194][]|-|-|
 |#pragma stop_map_region used without matching #pragma start_map_region; ignored|[C4195][]|-|-|
 |expected '%$L' or '%$L'; found '%$L'|[C4196][]|-|-|
-|'type' : top-level volatile in cast is ignored|[/W3 C4197][]|[-Wignored-qualifiers](https://wandbox.org/permlink/FThm1wRMpnzks9ub)|[NOWARN](https://wandbox.org/permlink/WSQvokj8rpa8yCsF)|:ballot_box_with_check:|
+|'type' : top-level volatile in cast is ignored|[/W3 C4197][]|[-Wignored-qualifiers](https://wandbox.org/permlink/FThm1wRMpnzks9ub)|[NOWARN](https://wandbox.org/permlink/WSQvokj8rpa8yCsF)||:ballot_box_with_check:|
 
 ## VS C4200-C4399
 
@@ -169,7 +169,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |nonstandard extension used : function given file scope|[/W4 C4210][]|error|[error](https://wandbox.org/permlink/1nNPehJwnEjXUOBz)||
 |nonstandard extension used : redefined extern to static|[/W4 C4211][]|error|[error](https://wandbox.org/permlink/kRBIv4tLQQ11vRTZ)||
 |nonstandard extension used : function declaration used ellipsis|[/W4 C4212][]|NOWARN|[NOWARN](https://wandbox.org/permlink/z7cyGh7pWaAiXpPL)||
-|nonstandard extension used : cast on l-value|[/W4 C4213][]|error|[error](https://wandbox.org/permlink/p6R5UAsDKSePzOAD)|-|-|-|
+|nonstandard extension used : cast on l-value|[/W4 C4213][]|error|[error](https://wandbox.org/permlink/p6R5UAsDKSePzOAD)||
 |nonstandard extension used : bit field types other than int|[/W4 C4214][] [C-Only][]|-|-|
 |nonstandard extension used : long float|[/W1 C4215][]|error|[error](https://wandbox.org/permlink/sotvrOqu0uuaTu2Z)|'long float' is invalid|
 |nonstandard extension used : float long|[/W1 C4216][]|error|[error](https://wandbox.org/permlink/IEe3Pa1KCnHmhH3y)|'long float' is invalid|
@@ -180,7 +180,8 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |nonstandard extension used : formal parameter 'identifier' was previously defined as a type|[/W1 C4224][]|NOWARN|NOWARN|
 |nonstandard extension used : 'keyword' is an obsolete keyword|[/W1 C4226][]|-|-|
 |anachronism used : qualifiers on reference are ignored|[/W1 C4227][]|error|[error](https://wandbox.org/permlink/igzUxWBoC98bspvH)|
-|nonstandard extension used : qualifiers after comma in declarator list are ignored|[/W1 C4228][]|error|[error](https://wandbox.org/permlink/5O81IRVL7fGaajRl)|anachronism used : modifiers on data are ignored|[/W1 C4229][]|-|-|
+|nonstandard extension used : qualifiers after comma in declarator list are ignored|[/W1 C4228][]|error|[error](https://wandbox.org/permlink/5O81IRVL7fGaajRl)|
+|anachronism used : modifiers on data are ignored|[/W1 C4229][]|-|-|
 |anachronism used : modifiers/qualifiers interspersed; qualifier ignored|[/W1 C4230][]|-|-|
 |nonstandard extension used : 'identifier' : address of dllimport 'dllimport' is not static, identity not guaranteed|[/W4 C4232][]|-|-|
 |nonstandard extension used : 'keyword' keyword only supported in C++, not C|[/W4 C4233][]|||
@@ -235,7 +236,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |'identifier': identifier in type library 'library' is a keyword; renaming to '__identifier'|[/W4 C4299][]||
 |'derived_class::function': overriding virtual function only differs from 'base_class::function' by const/volatile qualifier|[C4301][]|
 |'conversion' : truncation from 'type 1' to 'type 2'|[/W2 C4302][]|error -fpermissive|[error](https://wandbox.org/permlink/xePlkT1O3t91WIf3)|
-|C-style cast from 'type1' to 'type2' is deprecated, use static_cast, __try_cast or dynamic_cast|[C4303][]|-Wold-style-cast|[-Wold-style-cast](https://wandbox.org/permlink/s8vAGt63s0XVZbzq)|use of old-style cast|
+|C-style cast from 'type1' to 'type2' is deprecated, use static_cast, __try_cast or dynamic_cast|[C4303][]|-Wold-style-cast|[-Wold-style-cast](https://wandbox.org/permlink/s8vAGt63s0XVZbzq)|use of old-style cast|:ballot_box_with_check:|
 |'context' : truncation from 'type1' to 'type2'|[/W1 C4305][]|[-Wfloat-conversion](https://wandbox.org/permlink/nhZ1VE6O7RDdal7n)|[-Wimplicit-float-conversion](https://wandbox.org/permlink/mlDb0iY7nmCfWsLa)|implicit conversion loses floating-point precision: 'double' to 'float'|:ballot_box_with_check:|
 |'identifier' : conversion from 'type1' to 'type2' of greater size|[/W3 C4306][]|||
 |'operator' : integral constant overflow|[/W2 C4307][]|[-Woverflow](https://wandbox.org/permlink/jXOSXzTg16ZeVG8T)|[-Winteger-overflow](https://wandbox.org/permlink/5CFSu1o33qOFG8Hr)|overflow in expression; result is - _XXX_ with type '_TYPE_'|
@@ -354,7 +355,8 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |a class constructor must have private accessibility; changing to private access|[/W4 C4334][] clr|-|-|
 |'class1' : Object layout under /vd2 will change due to virtual base 'class2'|[/W4 C4435][]|-|-|
 |dynamic_cast from virtual base 'class1' to 'class2' in constructor or destructor could fail with partially-constructed object Compile with /vd2 or define 'class2' with #pragma vtordisp(2) in effect|[/W1 C4436][]|-|-|
-|dynamic_cast from virtual base 'class1' to 'class2' could fail in some contexts Compile with /vd2 or define 'class2' with #pragma vtordisp(2) in effect|[/W4 C4437][]|-|-|[C4438][]|-|-|
+|dynamic_cast from virtual base 'class1' to 'class2' could fail in some contexts Compile with /vd2 or define 'class2' with #pragma vtordisp(2) in effect|[/W4 C4437][]|-|-|
+|'function': cannot be called safely in /await:clrcompat mode. If 'function' calls into the CLR it may result in CLR head corruption|[C4438][]|-|-|
 |'function' : function definition with a managed type in the signature must have a __clrcall calling convention|[C4439][] clr|-|-|
 |calling convention redefinition from 'calling_convention1' to 'calling_convention2' ignored|[/W1 C4440][] clr|-|-|
 |calling convention of 'cc1' ignored; 'cc2' used instead|[/W1 C4441][] clr|-|-|
@@ -609,7 +611,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |'operation' : unsafe mix of type 'type' and type 'type' in operation|[/W1 C4805][]|NOWARN|[NOWARN](https://wandbox.org/permlink/7yRgHauQ4kNl6CJ5)|
 |'operation' : unsafe operation: no value of type 'type' promoted to type 'type' can equal the given constant|[/W1 C4806][]|[-Wbool-compare](https://wandbox.org/permlink/Cj6BgyKdWExnaMhS)|[-Wtautological-constant-out-of-range-compare](https://wandbox.org/permlink/5JWWi1sh4UzxlbaH)|result of comparison of constant 3 with expression of type 'bool' is always false|:ballot_box_with_check:|
 |'operation' : unsafe mix of type 'type' and signed bitfield of type 'type'|[/W1 C4807][]|NOWARN|[NOWARN](https://wandbox.org/permlink/oqgvOPeGOYjWaRNW)||
-|case 'value' is not a valid value for switch condition of type 'bool'|[/W1 C4808][]|[-Wswitch-outside-range](https://wandbox.org/permlink/RYbygUf1gRwsEXkh)|([-Wswitch-bool](https://wandbox.org/permlink/I3lbZljHIMBXNlct))||
+|case 'value' is not a valid value for switch condition of type 'bool'|[/W1 C4808][]|[-Wswitch-outside-range](https://wandbox.org/permlink/RYbygUf1gRwsEXkh)|([-Wswitch-bool](https://wandbox.org/permlink/I3lbZljHIMBXNlct))||:ballot_box_with_check:|
 |switch statement has redundant 'default' label; all possible 'case' labels are given|[/W1 C4809][]|||
 |value of pragma pack(show) == n|[/W1 C4810][]|-|-||
 |value of pragma conform(forScope, show) == value|[/W1 C4811][]|-|-||
@@ -764,7 +766,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |ignoring invalid command-line macro definition 'value'|[/W1 C5102][]|||
 |pasting 'token1' and 'token2' does not result in a valid preprocessing token|[/W1 C5103][]|wip|wip|
 |found 'string1#string2' in macro replacement list, did you mean 'string1""#string2'?|[/W1 C5104][]|wip|wip|
-|macro expansion producing 'defined' has undefined behavior|[/W1 C5105][]|-Wexpansion-to-defined|[-Wexpansion-to-defined](https://wandbox.org/permlink/eHT8F2Wo5RMZXgbC)|macro expansion producing 'defined' has undefined behavior|
+|macro expansion producing 'defined' has undefined behavior|[/W1 C5105][]|-Wexpansion-to-defined|[-Wexpansion-to-defined](https://wandbox.org/permlink/eHT8F2Wo5RMZXgbC)|macro expansion producing 'defined' has undefined behavior|:ballot_box_with_check:|
 |macro redefined with different parameter names|[/W1 C5106][]|wip|wip|
 |missing terminating 'char' character|[/W1 C5107][]|wip|wip|
 |__VA_OPT__ is reserved for use in variadic macros|[C5108][]|wip|wip|
