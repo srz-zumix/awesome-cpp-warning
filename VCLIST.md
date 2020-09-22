@@ -20,7 +20,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |empty statement at global scope|[/W4 C4019][]|-|[-Wextra-semi-stmt](https://wandbox.org/permlink/t2lN0EJnAuktq96r)|empty expression statement has no effect; remove unnecessary ';' to silence this warning |:ballot_box_with_check:|
 |'function' : too many actual parameters|~[/W1 C4020][]~ [error C2660][]|error|[error](https://wandbox.org/permlink/lomKAAkKfSylm4XI)||
 |'function' : pointer mismatch for actual parameter 'number'|[/W1 C4022][]||||
-|'symbol' : based pointer passed to unprototyped function : parameter number|[/W3 4023][]||||
+|'symbol' : based pointer passed to unprototyped function : parameter number|[/W3 C4023][]||||
 |'function' : different types for formal and actual parameter 'number'|[/W1 C4024][]||||
 |'number' : based pointer passed to function with variable arguments: parameter number|[/W1 C4025][]||||
 |function declared with formal parameter list|[/W1 C4026][]||||
@@ -44,7 +44,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |type conversion; possible loss of data|[/W2 C4051][]||
 |function declarations different; one contains variable arguments|[/W1 C4052][]||
 |one void operand for '?:'|[/W4 C4053][]||
-|'conversion' : from data pointer 'type1' to function pointer 'type2'|~[/W1 4055][]~ [Obsolete VS2017][]|-|-|
+|'conversion' : from data pointer 'type1' to function pointer 'type2'|~[/W1 C4055][]~ [Obsolete VS2017][]|-|-|
 |overflow in floating point constant arithmetic|[/W2 C4056][] ??|||
 |'operator' : 'identifier1' indirection to slightly different base types from 'identifier2'|[/W4 C4057][] [C-Only][]|||
 |switch statement contains no 'case' or 'default' labels|[C4060][]|NOWARN|[NOWARN](https://wandbox.org/permlink/2fOrUDbtAUetkWBV)||
@@ -74,7 +74,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |'operation' : different 'modifier' qualifiers|[/W1 C4090][] [C-Only][]||
 |'keyword' : ignored on left of 'type' when no variable is declared|[/W1 C4091][]|error|error|
 |sizeof returns 'unsigned long'|[/W4 C4092][]||
-|untagged 'token' declared no symbols|[/W2 4094][]|error|[error](https://wandbox.org/permlink/sKSWL8bsVWNxvIBn)||
+|untagged 'token' declared no symbols|[/W2 C4094][]|error|[error](https://wandbox.org/permlink/sKSWL8bsVWNxvIBn)||
 |'a': interface is not a COM interface; will not be emitted to IDL|[/W1 C4096][]|-|-|
 |expected pragma parameter to be 'restore' or 'off'|[/W1 C4097][]|-Wunknown-pragmas|-Wunknown-pragmas||
 |'function' : void function returning a value|[/W1 C4098][]|||
@@ -125,7 +125,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |'identifier' : no function with C linkage found|[/W1 C4162][]|-|-|
 |'identifier' : not available as an intrinsic function|[/W1 C4163][]|-|-|
 |'identifier' : intrinsic function not declared|[/W1 C4164][]|-|-|
-|'HRESULT' is being converted to 'bool'; are you sure this is what you want?|[/W1 4165][]|-|-|
+|'HRESULT' is being converted to 'bool'; are you sure this is what you want?|[/W1 C4165][]|-|-|
 |illegal calling convention for constructor/destructor|[/W1 C4166][]|-|-|
 |function : only available as an intrinsic function|[/W1 C4167][]|-|-|
 |compiler limit : out of debugger types, delete program database 'database' and rebuild|[/W1 C4168][]|-|-|
@@ -490,7 +490,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |'identifier' : macro is not defined or definition is different after precompiled header use|[/W1 C4603][]||||
 |#pragma warning : 'warning_number' ignored; Code Analysis warnings are not associated with warning levels|[/W1 C4604][]|-Wunknown-pragmas|[-Wunknown-pragmas](https://wandbox.org/permlink/heYKtzAVVury2uG5)|unknown pragma ignored|
 |'union_member' has already been initialized by another union member in the initializer list, 'union_member'|[/W3 C4608][]|error|[error](https://wandbox.org/permlink/9obu7gH744zT7909)|initializing multiple members of union|
-|object 'class' can never be instantiated - user-defined constructor required|[/W4 4610][]|error|[error](https://wandbox.org/permlink/MLWyAdkYiRb0HW02)|extra qualification on member 'operator='|
+|object 'class' can never be instantiated - user-defined constructor required|[/W4 C4610][]|error|[error](https://wandbox.org/permlink/MLWyAdkYiRb0HW02)|extra qualification on member 'operator='|
 |interaction between 'function' and C++ object destruction is non-portable|[/W4 C4611][]||
 |This warning occurs with #pragma include_alias when a filename is incorrect or missing|[/W1 C4612][]|-Wunknown-pragmas|[-Wunknown-pragmas](https://wandbox.org/permlink/gek3vezcBnv9odDt)||
 |'segment' : class of segment cannot be changed|[/W1 C4613][]|||
@@ -609,7 +609,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |'operation' : unsafe mix of type 'type' and type 'type' in operation|[/W1 C4805][]|NOWARN|[NOWARN](https://wandbox.org/permlink/7yRgHauQ4kNl6CJ5)|
 |'operation' : unsafe operation: no value of type 'type' promoted to type 'type' can equal the given constant|[/W1 C4806][]|[-Wbool-compare](https://wandbox.org/permlink/Cj6BgyKdWExnaMhS)|[-Wtautological-constant-out-of-range-compare](https://wandbox.org/permlink/5JWWi1sh4UzxlbaH)|result of comparison of constant 3 with expression of type 'bool' is always false|:ballot_box_with_check:|
 |'operation' : unsafe mix of type 'type' and signed bitfield of type 'type'|[/W1 C4807][]|NOWARN|[NOWARN](https://wandbox.org/permlink/oqgvOPeGOYjWaRNW)||
-|case 'value' is not a valid value for switch condition of type 'bool'|[/W1 C4808][]|[-Wswitch-outside-range](https://wandbox.org/permlink/RYbygUf1gRwsEXkh)|[-Wswitch-outside-range]|([](https://wandbox.org/permlink/I3lbZljHIMBXNlct))|
+|case 'value' is not a valid value for switch condition of type 'bool'|[/W1 C4808][]|[-Wswitch-outside-range](https://wandbox.org/permlink/RYbygUf1gRwsEXkh)|([-Wswitch-bool](https://wandbox.org/permlink/I3lbZljHIMBXNlct))||
 |switch statement has redundant 'default' label; all possible 'case' labels are given|[/W1 C4809][]|||
 |value of pragma pack(show) == n|[/W1 C4810][]|-|-||
 |value of pragma conform(forScope, show) == value|[/W1 C4811][]|-|-||
