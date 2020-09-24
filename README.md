@@ -47,6 +47,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 | -         | -Wsign-conversion         | -         | [-Wsign-conversion][]              | /W4   | C4245, C4365 |
 | -         | -Woverloaded-virtual      |           | [-Woverloaded-virtual][]           | /W4   | C4263 |
 | -         | -Wnon-virtual-dtor        | -         | [-Wnon-virtual-dtor][]             | /W3   | C4265 |
+| -         | -Wnon-virtual-dtor        | -         | [-Wnon-virtual-dtor][]             |       | C5204 |
 | -         | -Wconversion              | -         | [-Wshorten-64-to-32][]             | /W3   | C4267 |
 |           | warning                   |           | [-Wexceptions][]                   | /W1   | C4286 |
 |           | -Wshift-count-overflow    |           | [-Wshift-count-overflow][]         | /W1   | C4293 |

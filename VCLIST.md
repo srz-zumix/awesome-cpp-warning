@@ -774,7 +774,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |a module declaration can appear only at the start of a translation unit unless a global module fragment is used|[C5201][]|wip|wip|
 |a global module fragment can only contain preprocessor directives|[C5202][]|wip|wip|
 |a parenthesized declarator name after 'explicit' will be considered an explicit-specifier in C++20|[C5203][]|wip|wip|
-|'type-name': class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly|[C5204][]|wip|wip|
+|'type-name': class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly|[C5204][]|-Wnon-virtual-dtor|[-Wnon-virtual-dtor](https://wandbox.org/permlink/giji7Ai7G4aVTotZ)|'_CLASS_' has virtual functions but non-virtual destructor|:ballot_box_with_check:|
 |delete of an abstract class 'type-name' that has a non-virtual destructor results in undefined behavior|[C5205][]|wip|wip|
 |deduced return types for coroutines is a non-standard extension|[C5206][]|wip|wip|
 |the simple requirement asserts the validity of expression 'e->id'. Did you mean '{ e } -> id'? You can suppress the warning using '{ e->id }'|[C5207][]|wip|wip|
