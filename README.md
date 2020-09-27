@@ -6,6 +6,13 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 
 [VC++ List](./VCLIST.md)
 
+## Reference
+
+* [Diagnostic flags in Clang — Clang 12 documentation](https://clang.llvm.org/docs/DiagnosticsReference.html#winconsistent-missing-destructor-override)
+* [Warning Options (Using the GNU Compiler Collection (GCC))](https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html)
+* [コンパイラ警告 | Microsoft Docs](https://docs.microsoft.com/ja-jp/cpp/error-messages/compiler-warnings/compiler-warnings-c4000-c5999?view=vs-2019)
+  * [Compiler warnings | Microsoft Docs](https://docs.microsoft.com/en-US/cpp/error-messages/compiler-warnings/compiler-warnings-c4000-c5999?view=vs-2019)
+
 ## Table
 
 |GCC Group|GCC Warn|Clang Group|Clang Warn|VC Group|VC Warn|
@@ -99,8 +106,13 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |           | -Wexpansion-to-defined    |           | [-Wexpansion-to-defined][]         | /W1   | C5105 |
 |           |                           |           | [-Wabsolute-value][]               | | |
 |           |                           |           | [-Wabstract-final-class][]         | | |
-|           | -Wconversion-null         |           | [-Wnull-conversion][]              | | |
+|           |                           | -         | [-Winconsistent-missing-destructor-override][] | | |
+|           |                           |           | [-Winconsistent-missing-override][]| | |
 |           | -Wdangling-else           |           | [-Wdangling-else][]                | | |
+|           | -Wconversion-null         |           | [-Wnull-conversion][]              | | |
+|           |                           | -         | [-Wsuggest-destructor-override][]  | | |
+|           |                           | -         | [-Wsuggest-override][]             | | |
+
 
 [-Wabsolute-value]:https://wandbox.org/permlink/wd0wbHes8nqkNsTQ
 [-Wabstract-final-class]:https://wandbox.org/permlink/r7k7wieaf2d9qbdJ
@@ -136,6 +148,8 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 [-Wimplicit-float-conversion]:https://wandbox.org/permlink/mlDb0iY7nmCfWsLa
 [-Wimplicit-int-conversion]:https://wandbox.org/permlink/jw7P7K3ei05sCgmM
 [-Winaccessible-base]:https://wandbox.org/permlink/A5gzOVfFAaQhXrjw
+[-Winconsistent-missing-destructor-override]:https://wandbox.org/permlink/E3uyAwlJUPujbmv0
+[-Winconsistent-missing-override]:https://wandbox.org/permlink/098vW5kNxd6AuF5f
 [-Winfinite-recursion]:https://wandbox.org/permlink/RlZOz4cCTGLWpeFL
 [-Wint-to-void-pointer-cast]:https://wandbox.org/permlink/ENteC23V5rCJNKBu
 [-Winteger-overflow]:https://wandbox.org/permlink/5CFSu1o33qOFG8Hr
@@ -166,6 +180,8 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 [-Wsign-conversion]:https://wandbox.org/permlink/nar9aUENFpL8ZlCq
 [-Wsometimes-uninitialized]:https://wandbox.org/permlink/OKj3yYplXtXeG1uB
 [-Wstring-compare]:https://wandbox.org/permlink/zgBHQfYXOT7KIGGg
+[-Wsuggest-destructor-override]:https://wandbox.org/permlink/9hBh6F59skKaNE3Y
+[-Wsuggest-override]:https://wandbox.org/permlink/QATLGuvGEZAfPnlK
 [-Wswitch]:https://wandbox.org/permlink/X14xNQbbxmgU1W2f
 [-Wswitch-bool]:https://wandbox.org/permlink/vL1ObRTKd8d0hkOR
 [-Wswitch-outside-range]:https://wandbox.org/permlink/RYbygUf1gRwsEXkh
