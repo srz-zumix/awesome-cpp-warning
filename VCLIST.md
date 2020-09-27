@@ -790,7 +790,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 ||-|[NOWARN](https://wandbox.org/permlink/86egQA2SgiSWIaJK)|[-Wabstract-final-class](https://wandbox.org/permlink/r7k7wieaf2d9qbdJ)|abstract class is marked 'final'||
 ||-|-|[-Winconsistent-missing-override](https://wandbox.org/permlink/098vW5kNxd6AuF5f)|'_NAME_' overrides a member function but is not marked 'override'||
 ||-|-|[-Winconsistent-missing-destructor-override](https://wandbox.org/permlink/E3uyAwlJUPujbmv0)|'_NAME_' overrides a destructor but is not marked 'override'||
-||-|-|[-Wsuggest-override](https://wandbox.org/permlink/QATLGuvGEZAfPnlK)|'_NAME_' overrides a member function but is not marked 'override'||
+||-|-Wsuggest-override|[-Wsuggest-override](https://wandbox.org/permlink/QATLGuvGEZAfPnlK)|'_NAME_' overrides a member function but is not marked 'override'||
 ||-|-|[-Wsuggest-destructor-override](https://wandbox.org/permlink/9hBh6F59skKaNE3Y)|'_NAME_' overrides a destructor but is not marked 'override'||
 
 ## Annotaion
