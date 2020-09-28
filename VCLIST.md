@@ -792,6 +792,8 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 ||-|-|[-Winconsistent-missing-destructor-override](https://wandbox.org/permlink/E3uyAwlJUPujbmv0)|'_NAME_' overrides a destructor but is not marked 'override'||
 ||-|-Wsuggest-override|[-Wsuggest-override](https://wandbox.org/permlink/QATLGuvGEZAfPnlK)|'_NAME_' overrides a member function but is not marked 'override'||
 ||-|-|[-Wsuggest-destructor-override](https://wandbox.org/permlink/9hBh6F59skKaNE3Y)|'_NAME_' overrides a destructor but is not marked 'override'||
+||-|-|[-Wparentheses-equality](https://wandbox.org/permlink/MzEiGaVxP3AZfwry)|equality comparison with extraneous parentheses|
+|int* p=0;|-|-|[-Wzero-as-null-pointer-constant](https://wandbox.org/permlink/C2A7xhoBUe5bgLjB)|zero as null pointer constant|
 
 ## Annotaion
 

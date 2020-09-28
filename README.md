@@ -115,8 +115,10 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |           |                           |           | [-Winconsistent-missing-override][]| | |
 |           | -Wdangling-else           |           | [-Wdangling-else][]                | | |
 |           | -Wconversion-null         |           | [-Wnull-conversion][]              | | |
+|           |                           |           | [-Wparentheses-equality][]         | | |
 |           |                           | -         | [-Wsuggest-destructor-override][]  | | |
 | -         | -Wsuggest-override        | -         | [-Wsuggest-override][]             | | |
+|           |                           | -         | [-Wzero-as-null-pointer-constant][]| | |
 
 
 [-Wabsolute-value]:https://wandbox.org/permlink/wd0wbHes8nqkNsTQ
@@ -170,6 +172,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 [-Woverflow]:https://wandbox.org/permlink/jXOSXzTg16ZeVG8T
 [-Woverloaded-virtual]:https://wandbox.org/permlink/ZAV9lUH5hRDbZZgv
 [-Wparentheses]:https://wandbox.org/permlink/0aY8EHsyCWoz93fa
+[-Wparentheses-equality]:https://wandbox.org/permlink/MzEiGaVxP3AZfwry
 [-Wpragma-pack]:https://wandbox.org/permlink/ip1Ds0WQRxFwdQp4
 [-Wreinterpret-base-class]:https://wandbox.org/permlink/QBpE5D0NuXS8oHiH
 [-Wreorder-ctor]:https://wandbox.org/permlink/wF1sODcNFjIIfXQ0
@@ -207,4 +210,6 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 [-Wunused-value]:https://wandbox.org/permlink/vm2J5xlyxySBqWgz
 [-Wunused-variable]:https://wandbox.org/permlink/sZKVILFpyoQUnljb
 [-Wvexing-parse]:https://wandbox.org/permlink/VOOIavontGmvvYVE
+[-Wzero-as-null-pointer-constant]:https://wandbox.org/permlink/C2A7xhoBUe5bgLjB
 [-Wzero-length-array]:https://wandbox.org/permlink/dCOhebgvxxv9adE5
+
