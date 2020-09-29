@@ -111,6 +111,9 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |           | -Wexpansion-to-defined    |           | [-Wexpansion-to-defined][]         | /W1   | C5105 |
 |           |                           |           | [-Wabsolute-value][]               | | |
 |           |                           |           | [-Wabstract-final-class][]         | | |
+|           |                           | -         | [-Wexit-time-destructors][]        | | |
+|           |                           | -         | [-Wglobal-constructors][]          | | |
+|           |                           | -         | [-Wgnu-zero-variadic-macro-arguments][] | | |
 |           |                           | -         | [-Winconsistent-missing-destructor-override][] | | |
 |           |                           |           | [-Winconsistent-missing-override][]| | |
 |           | -Wdangling-else           |           | [-Wdangling-else][]                | | |
@@ -142,6 +145,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 [-Wduplicate-decl-specifier]:https://wandbox.org/permlink/3j36NXx7PZRFSowX
 [-Wempty-body]:https://wandbox.org/permlink/G6Ts7ShpqVRBFK6J
 [-Wexceptions]:https://wandbox.org/permlink/hPSJuIMRT0tMXdhj
+[-Wexit-time-destructors]:https://wandbox.org/permlink/2e6HMzwIWROt9ph6
 [-Wexpansion-to-defined]:https://wandbox.org/permlink/eHT8F2Wo5RMZXgbC
 [-Wextra-semi-stmt]:https://wandbox.org/permlink/t2lN0EJnAuktq96r
 [-Wextra-tokens]:https://wandbox.org/permlink/GWAzROCAePlNDfxT
@@ -149,8 +153,10 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 [-Wformat]:https://wandbox.org/permlink/UEnKVbHljnoDpEkZ
 [-Wformat-extra-args]:https://wandbox.org/permlink/BI3Z7W3t02EoAQ00
 [-Wfortify-source]:https://wandbox.org/permlink/8kVPyQRJP9LiEJV4
+[-Wglobal-constructors]:https://wandbox.org/permlink/2e6HMzwIWROt9ph6
 [-Wgnu-anonymous-struct]:https://wandbox.org/permlink/SlT2dcwmnJRE8eKo
 [-Wgnu-zero-line-directive]:https://wandbox.org/permlink/68eMjVotYyqwkaqd
+[-Wgnu-zero-variadic-macro-arguments]:https://wandbox.org/permlink/MwI4rr83YjwxW241
 [-Wignored-qualifiers]:https://wandbox.org/permlink/eCGVd8s2oBd7tqGi
 [-Wimplicit-float-conversion]:https://wandbox.org/permlink/mlDb0iY7nmCfWsLa
 [-Wimplicit-int-conversion]:https://wandbox.org/permlink/jw7P7K3ei05sCgmM
@@ -212,4 +218,3 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 [-Wvexing-parse]:https://wandbox.org/permlink/VOOIavontGmvvYVE
 [-Wzero-as-null-pointer-constant]:https://wandbox.org/permlink/C2A7xhoBUe5bgLjB
 [-Wzero-length-array]:https://wandbox.org/permlink/dCOhebgvxxv9adE5
-

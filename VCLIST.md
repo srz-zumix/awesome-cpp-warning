@@ -788,12 +788,16 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |int x = NULL;|-|[-Wconversion-null](https://wandbox.org/permlink/CKYlII9m0sW7PpOv)|[-Wnull-conversion](https://wandbox.org/permlink/ABZSxzM9XR0r1a4B)|implicit conversion of NULL constant to '_TYPE_'|
 |if .. else ..|-|[-Wdangling-else](https://wandbox.org/permlink/2dYFvxgWxBJSRdwN)|[-Wdangling-else](https://wandbox.org/permlink/GroeDOmm6CQWjxVV)|add explicit braces to avoid dangling else|
 ||-|[NOWARN](https://wandbox.org/permlink/86egQA2SgiSWIaJK)|[-Wabstract-final-class](https://wandbox.org/permlink/r7k7wieaf2d9qbdJ)|abstract class is marked 'final'||
+||-|-|[-Wexit-time-destructors](https://wandbox.org/permlink/2e6HMzwIWROt9ph6)|declaration requires an exit-time destructor|
+||-|-|[-Wglobal-constructors](https://wandbox.org/permlink/2e6HMzwIWROt9ph6)|declaration requires a global destructor|
 ||-|-|[-Winconsistent-missing-override](https://wandbox.org/permlink/098vW5kNxd6AuF5f)|'_NAME_' overrides a member function but is not marked 'override'||
 ||-|-|[-Winconsistent-missing-destructor-override](https://wandbox.org/permlink/E3uyAwlJUPujbmv0)|'_NAME_' overrides a destructor but is not marked 'override'||
 ||-|-Wsuggest-override|[-Wsuggest-override](https://wandbox.org/permlink/QATLGuvGEZAfPnlK)|'_NAME_' overrides a member function but is not marked 'override'||
 ||-|-|[-Wsuggest-destructor-override](https://wandbox.org/permlink/9hBh6F59skKaNE3Y)|'_NAME_' overrides a destructor but is not marked 'override'||
 ||-|-|[-Wparentheses-equality](https://wandbox.org/permlink/MzEiGaVxP3AZfwry)|equality comparison with extraneous parentheses|
+|#define __HOGE|-|-|[-Wreserved-id-macro](https://wandbox.org/permlink/28t8bLQ9snrjZ2mj)|macro name is a reserved identifier||
 |int* p=0;|-|-|[-Wzero-as-null-pointer-constant](https://wandbox.org/permlink/C2A7xhoBUe5bgLjB)|zero as null pointer constant|
+||-|-|[-Wgnu-zero-variadic-macro-arguments](https://wandbox.org/permlink/MwI4rr83YjwxW241)|must specify at least one argument for '...' parameter of variadic macro|
 
 ## Annotaion
 
