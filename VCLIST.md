@@ -792,6 +792,8 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 ||-|-|[-Wglobal-constructors](https://wandbox.org/permlink/2e6HMzwIWROt9ph6)|declaration requires a global destructor|
 ||-|-|[-Winconsistent-missing-override](https://wandbox.org/permlink/098vW5kNxd6AuF5f)|'_NAME_' overrides a member function but is not marked 'override'||
 ||-|-|[-Winconsistent-missing-destructor-override](https://wandbox.org/permlink/E3uyAwlJUPujbmv0)|'_NAME_' overrides a destructor but is not marked 'override'||
+||-|-|[-Wmissing-braces](https://wandbox.org/permlink/eHiKH65WfwXnPdU7)|suggest braces around initialization of subobject|
+||-|-Wshadow|[-Wshadow-field-in-constructor](https://wandbox.org/permlink/YYPYkrokYuX3vFsH)|constructor parameter '_VAR_' shadows the field '_VAR_' of '_CLASS_'||
 ||-|-Wsuggest-override|[-Wsuggest-override](https://wandbox.org/permlink/QATLGuvGEZAfPnlK)|'_NAME_' overrides a member function but is not marked 'override'||
 ||-|-|[-Wsuggest-destructor-override](https://wandbox.org/permlink/9hBh6F59skKaNE3Y)|'_NAME_' overrides a destructor but is not marked 'override'||
 ||-|-|[-Wparentheses-equality](https://wandbox.org/permlink/MzEiGaVxP3AZfwry)|equality comparison with extraneous parentheses|

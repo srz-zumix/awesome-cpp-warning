@@ -78,6 +78,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |           | warning                   |           | [-Wmissing-declarations][]         | /W4   | C4408 |
 |           | error                     |           | [-Wunicode][]                      | /W4   | C4429 |
 | -         | -Wshadow                  | -         | [-Wshadow][]                       | /W4   | C4456, C4457, C4458, C4459 |
+| -         | -Wshadow                  | -         | [-Wshadow-field-in-constructor][]  |       |       |
 |           |                           |           | [-Wbitfield-constant-conversion][] | /W4   | C4463 |
 |           | -Waddress                 |           | [-Wcomma][]                        | /W1   | C4545, C4546 |
 |           |                           |           | [-Wcomma][]                        | /W4   | C4913 |
@@ -117,6 +118,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |           |                           | -         | [-Winconsistent-missing-destructor-override][] | | |
 |           |                           |           | [-Winconsistent-missing-override][]| | |
 |           | -Wdangling-else           |           | [-Wdangling-else][]                | | |
+|           |                           |           | [-Wmissing-braces][]               | | |
 |           | -Wconversion-null         |           | [-Wnull-conversion][]              | | |
 |           |                           |           | [-Wparentheses-equality][]         | | |
 |           |                           | -         | [-Wsuggest-destructor-override][]  | | |
@@ -169,6 +171,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 [-Wmacro-redefined]:https://wandbox.org/permlink/FeN9eryQ6AjJtPm1
 [-Wmemset-transposed-args]:https://wandbox.org/permlink/DsZYpzhpjLn6Yer5
 [-Wmismatched-tags]:https://wandbox.org/permlink/a7KmDSJZeiKS8ICp
+[-Wmissing-braces]:https://wandbox.org/permlink/eHiKH65WfwXnPdU7
 [-Wmissing-declarations]:https://wandbox.org/permlink/rNlYQGT2lyhtNYU4
 [-Wmultichar]:https://wandbox.org/permlink/zFGKNIXEuswp8qrR
 [-Wnarrowing]:https://wandbox.org/permlink/38PevVKq6JDJbGEh
@@ -187,6 +190,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 [-Wreturn-type]:https://wandbox.org/permlink/l8AKsXFnsPgQtD5o
 [-Wreturn-type-c-linkage]:https://wandbox.org/permlink/SEWKt2JcLBnAdeZH
 [-Wshadow]:https://wandbox.org/permlink/aFyQBg6xvJ4oYPay
+[-Wshadow-field-in-constructor]:https://wandbox.org/permlink/YYPYkrokYuX3vFsH
 [-Wshift-count-overflow]:https://wandbox.org/permlink/0c0V7KDrG6bzAelS
 [-Wshift-op-parentheses]:https://wandbox.org/permlink/amX76yhKYrTeGblb
 [-Wshorten-64-to-32]:https://wandbox.org/permlink/PV73kTvl4LkSOcQG
