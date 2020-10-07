@@ -112,6 +112,8 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |           | -Wexpansion-to-defined    |           | [-Wexpansion-to-defined][]         | /W1   | C5105 |
 |           |                           |           | [-Wabsolute-value][]               | | |
 |           |                           |           | [-Wabstract-final-class][]         | | |
+|           |                           | -         | [-Wcovered-switch-default][]       | | |
+| -         | -Wdouble-promotion        | -         | [-Wdouble-promotion][]             | | |
 |           |                           | -         | [-Wexit-time-destructors][]        | | |
 |           |                           | -         | [-Wglobal-constructors][]          | | |
 |           |                           | -         | [-Wgnu-zero-variadic-macro-arguments][] | | |
@@ -138,12 +140,14 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 [-Wcomma-subscript]:https://wandbox.org/permlink/aOaBTW9UwVfb9hfP
 [-Wcomment]:https://wandbox.org/permlink/cK2Ulm07VwtI2NIN
 [-Wconstant-conversion]:https://wandbox.org/permlink/YCDxr5fAZmoTYlDP
+[-Wcovered-switch-default]:https://wandbox.org/permlink/5IR1twPO6UFoUU2E
 [-Wconversion]:https://wandbox.org/permlink/pl2CyQXzdcUzrkBy
 [-Wdangling-else]:https://wandbox.org/permlink/GroeDOmm6CQWjxVV
 [-Wdelete-incomplete]:https://wandbox.org/permlink/K6r1Yfsu7n9bfGCk
 [-Wdeprecated-comma-subscript]:https://wandbox.org/permlink/mmD72OEmb9GsIEU1
 [-Wdeprecated-declarations]:https://wandbox.org/permlink/dBNHrMNwieFpDru9
 [-Wdivision-by-zero]:https://wandbox.org/permlink/0HhGfj6Vyya45bZT
+[-Wdouble-promotion]:https://wandbox.org/permlink/aWLSiO491xHva5aE
 [-Wduplicate-decl-specifier]:https://wandbox.org/permlink/3j36NXx7PZRFSowX
 [-Wempty-body]:https://wandbox.org/permlink/G6Ts7ShpqVRBFK6J
 [-Wexceptions]:https://wandbox.org/permlink/hPSJuIMRT0tMXdhj
