@@ -788,12 +788,14 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 ||-|-|[-Wcovered-switch-default](https://wandbox.org/permlink/5IR1twPO6UFoUU2E)|default label in switch which covers all enumeration values||
 |int x = NULL;|-|[-Wconversion-null](https://wandbox.org/permlink/CKYlII9m0sW7PpOv)|[-Wnull-conversion](https://wandbox.org/permlink/ABZSxzM9XR0r1a4B)|implicit conversion of NULL constant to '_TYPE_'|
 |if .. else ..|-|[-Wdangling-else](https://wandbox.org/permlink/2dYFvxgWxBJSRdwN)|[-Wdangling-else](https://wandbox.org/permlink/GroeDOmm6CQWjxVV)|add explicit braces to avoid dangling else|
+||-|-Wdouble-promotion|[-Wdouble-promotion](https://wandbox.org/permlink/aWLSiO491xHva5aE)|implicit conversion increases floating-point precision: 'float' to 'double'|
 ||-|[NOWARN](https://wandbox.org/permlink/86egQA2SgiSWIaJK)|[-Wabstract-final-class](https://wandbox.org/permlink/r7k7wieaf2d9qbdJ)|abstract class is marked 'final'||
 ||-|-|[-Wexit-time-destructors](https://wandbox.org/permlink/2e6HMzwIWROt9ph6)|declaration requires an exit-time destructor|
 ||-|-|[-Wglobal-constructors](https://wandbox.org/permlink/2e6HMzwIWROt9ph6)|declaration requires a global destructor|
 ||-|-|[-Winconsistent-missing-override](https://wandbox.org/permlink/098vW5kNxd6AuF5f)|'_NAME_' overrides a member function but is not marked 'override'||
 ||-|-|[-Winconsistent-missing-destructor-override](https://wandbox.org/permlink/E3uyAwlJUPujbmv0)|'_NAME_' overrides a destructor but is not marked 'override'||
 ||-|-|[-Wmissing-braces](https://wandbox.org/permlink/eHiKH65WfwXnPdU7)|suggest braces around initialization of subobject|
+||-|-Wmissing-noreturn([-Wsuggest-attribute=noreturn](https://wandbox.org/permlink/34UHOrtmkMPIDLy1))|[-Wmissing-noreturn](https://wandbox.org/permlink/1bOIJJ08Dl46CTWM)|function '_NAME_' could be declared with attribute 'noreturn'|
 ||-|-Wshadow|[-Wshadow-field-in-constructor](https://wandbox.org/permlink/YYPYkrokYuX3vFsH)|constructor parameter '_VAR_' shadows the field '_VAR_' of '_CLASS_'||
 ||-|-Wsuggest-override|[-Wsuggest-override](https://wandbox.org/permlink/QATLGuvGEZAfPnlK)|'_NAME_' overrides a member function but is not marked 'override'||
 ||-|-|[-Wsuggest-destructor-override](https://wandbox.org/permlink/9hBh6F59skKaNE3Y)|'_NAME_' overrides a destructor but is not marked 'override'||

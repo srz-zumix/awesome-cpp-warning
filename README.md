@@ -121,8 +121,10 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |           |                           |           | [-Winconsistent-missing-override][]| | |
 |           | -Wdangling-else           |           | [-Wdangling-else][]                | | |
 |           |                           |           | [-Wmissing-braces][]               | | |
+| -         | -Wmissing-noreturn        | -         | [-Wmissing-noreturn][]             | | |
 |           | -Wconversion-null         |           | [-Wnull-conversion][]              | | |
 |           |                           |           | [-Wparentheses-equality][]         | | |
+| -         | [-Wsuggest-attribute=noreturn][] |    | ([-Wmissing-noreturn][])           | | |
 |           |                           | -         | [-Wsuggest-destructor-override][]  | | |
 | -         | -Wsuggest-override        | -         | [-Wsuggest-override][]             | | |
 |           |                           | -         | [-Wzero-as-null-pointer-constant][]| | |
@@ -177,6 +179,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 [-Wmismatched-tags]:https://wandbox.org/permlink/a7KmDSJZeiKS8ICp
 [-Wmissing-braces]:https://wandbox.org/permlink/eHiKH65WfwXnPdU7
 [-Wmissing-declarations]:https://wandbox.org/permlink/rNlYQGT2lyhtNYU4
+[-Wmissing-noreturn]:https://wandbox.org/permlink/1bOIJJ08Dl46CTWM
 [-Wmultichar]:https://wandbox.org/permlink/zFGKNIXEuswp8qrR
 [-Wnarrowing]:https://wandbox.org/permlink/38PevVKq6JDJbGEh
 [-Wnon-virtual-dtor]:https://wandbox.org/permlink/KeW1Px6KLH9WB9bz
@@ -202,6 +205,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 [-Wsign-conversion]:https://wandbox.org/permlink/nar9aUENFpL8ZlCq
 [-Wsometimes-uninitialized]:https://wandbox.org/permlink/OKj3yYplXtXeG1uB
 [-Wstring-compare]:https://wandbox.org/permlink/zgBHQfYXOT7KIGGg
+[-Wsuggest-attribute=noreturn]:https://wandbox.org/permlink/34UHOrtmkMPIDLy1
 [-Wsuggest-destructor-override]:https://wandbox.org/permlink/9hBh6F59skKaNE3Y
 [-Wsuggest-override]:https://wandbox.org/permlink/QATLGuvGEZAfPnlK
 [-Wswitch]:https://wandbox.org/permlink/X14xNQbbxmgU1W2f
