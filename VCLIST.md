@@ -779,6 +779,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |deduced return types for coroutines is a non-standard extension|[C5206][]|wip|wip|
 |the simple requirement asserts the validity of expression 'e->id'. Did you mean '{ e } -> id'? You can suppress the warning using '{ e->id }'|[C5207][]|wip|wip|
 |unnamed class used in typedef name cannot declare members other than non-static data members, member enumerations, or member classes|[/W1 C5208][],[error C7626][]|error|[error](https://wandbox.org/permlink/EwPQlALhCL9Y2IqL)|
+||C5219|[NOWARN](https://wandbox.org/permlink/CDxas2VBWy4M1WKX)|[-Wimplicit-int-float-conversion](https://wandbox.org/permlink/69sJpDJPDi36bNbh)|implicit conversion from 'int' to 'float' may lose precision|:ballot_box_with_check:|
 
 ## no VS
 
@@ -797,6 +798,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 ||-|-|[-Wmissing-braces](https://wandbox.org/permlink/eHiKH65WfwXnPdU7)|suggest braces around initialization of subobject|
 ||-|-Wmissing-noreturn([-Wsuggest-attribute=noreturn](https://wandbox.org/permlink/34UHOrtmkMPIDLy1))|[-Wmissing-noreturn](https://wandbox.org/permlink/1bOIJJ08Dl46CTWM)|function '_NAME_' could be declared with attribute 'noreturn'|
 ||-|-Wshadow|[-Wshadow-field-in-constructor](https://wandbox.org/permlink/YYPYkrokYuX3vFsH)|constructor parameter '_VAR_' shadows the field '_VAR_' of '_CLASS_'||
+||[-Wshadow-compatible-local](https://wandbox.org/permlink/005yRoQb2vOs5I7N)|[-Wshadow-uncaptured-local](https://wandbox.org/permlink/gL3312D14GJsvxWW)|declaration shadows a local variable|
 ||-|-Wsuggest-override|[-Wsuggest-override](https://wandbox.org/permlink/QATLGuvGEZAfPnlK)|'_NAME_' overrides a member function but is not marked 'override'||
 ||-|-|[-Wsuggest-destructor-override](https://wandbox.org/permlink/9hBh6F59skKaNE3Y)|'_NAME_' overrides a destructor but is not marked 'override'||
 ||-|-|[-Wparentheses-equality](https://wandbox.org/permlink/MzEiGaVxP3AZfwry)|equality comparison with extraneous parentheses|

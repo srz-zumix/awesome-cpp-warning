@@ -110,6 +110,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |           | -Wdeprecated-declarations |           | [-Wdeprecated-declarations][]      | /W3   | C4996 |
 |           | -Wreorder                 |           | [-Wreorder-ctor][]                 |       | C5038 |
 |           | -Wexpansion-to-defined    |           | [-Wexpansion-to-defined][]         | /W1   | C5105 |
+|           |                           | -         | [-Wimplicit-int-float-conversion]  | /Wall | C5219 |
 |           |                           |           | [-Wabsolute-value][]               | | |
 |           |                           |           | [-Wabstract-final-class][]         | | |
 |           |                           | -         | [-Wcovered-switch-default][]       | | |
@@ -125,6 +126,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |           | -Wconversion-null         |           | [-Wnull-conversion][]              | | |
 |           |                           |           | [-Wparentheses-equality][]         | | |
 | -         | [-Wsuggest-attribute=noreturn][] |    | ([-Wmissing-noreturn][])           | | |
+| -         | [-Wshadow-compatible-local][] | -Wshadow-all | [-Wshadow-uncaptured-local][] | | |
 |           |                           | -         | [-Wsuggest-destructor-override][]  | | |
 | -         | -Wsuggest-override        | -         | [-Wsuggest-override][]             | | |
 |           |                           | -         | [-Wzero-as-null-pointer-constant][]| | |
@@ -168,6 +170,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 [-Wignored-qualifiers]:https://wandbox.org/permlink/eCGVd8s2oBd7tqGi
 [-Wimplicit-float-conversion]:https://wandbox.org/permlink/mlDb0iY7nmCfWsLa
 [-Wimplicit-int-conversion]:https://wandbox.org/permlink/jw7P7K3ei05sCgmM
+[-Wimplicit-int-float-conversion]:https://wandbox.org/permlink/69sJpDJPDi36bNbh
 [-Winaccessible-base]:https://wandbox.org/permlink/A5gzOVfFAaQhXrjw
 [-Winconsistent-missing-destructor-override]:https://wandbox.org/permlink/E3uyAwlJUPujbmv0
 [-Winconsistent-missing-override]:https://wandbox.org/permlink/098vW5kNxd6AuF5f
@@ -197,7 +200,9 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 [-Wreturn-type]:https://wandbox.org/permlink/l8AKsXFnsPgQtD5o
 [-Wreturn-type-c-linkage]:https://wandbox.org/permlink/SEWKt2JcLBnAdeZH
 [-Wshadow]:https://wandbox.org/permlink/aFyQBg6xvJ4oYPay
+[-Wshadow-compatible-local]:https://wandbox.org/permlink/005yRoQb2vOs5I7N
 [-Wshadow-field-in-constructor]:https://wandbox.org/permlink/YYPYkrokYuX3vFsH
+[-Wshadow-uncaptured-local]:(https://wandbox.org/permlink/gL3312D14GJsvxWW
 [-Wshift-count-overflow]:https://wandbox.org/permlink/0c0V7KDrG6bzAelS
 [-Wshift-op-parentheses]:https://wandbox.org/permlink/amX76yhKYrTeGblb
 [-Wshorten-64-to-32]:https://wandbox.org/permlink/PV73kTvl4LkSOcQG
