@@ -789,6 +789,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 ||-|-|[-Wcovered-switch-default](https://wandbox.org/permlink/5IR1twPO6UFoUU2E)|default label in switch which covers all enumeration values||
 |int x = NULL;|-|[-Wconversion-null](https://wandbox.org/permlink/CKYlII9m0sW7PpOv)|[-Wnull-conversion](https://wandbox.org/permlink/ABZSxzM9XR0r1a4B)|implicit conversion of NULL constant to '_TYPE_'|
 |if .. else ..|-|[-Wdangling-else](https://wandbox.org/permlink/2dYFvxgWxBJSRdwN)|[-Wdangling-else](https://wandbox.org/permlink/GroeDOmm6CQWjxVV)|add explicit braces to avoid dangling else|
+||-|-|[-Wdangling-gsl](https://wandbox.org/permlink/ElaEUdxRRiEObfKp)|object backing the pointer will be destroyed at the end of the full-expression|
 ||-|-Wdouble-promotion|[-Wdouble-promotion](https://wandbox.org/permlink/aWLSiO491xHva5aE)|implicit conversion increases floating-point precision: 'float' to 'double'|
 ||-|[NOWARN](https://wandbox.org/permlink/86egQA2SgiSWIaJK)|[-Wabstract-final-class](https://wandbox.org/permlink/r7k7wieaf2d9qbdJ)|abstract class is marked 'final'||
 ||-|-|[-Wexit-time-destructors](https://wandbox.org/permlink/2e6HMzwIWROt9ph6)|declaration requires an exit-time destructor|

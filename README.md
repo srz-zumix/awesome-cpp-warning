@@ -121,6 +121,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |           |                           | -         | [-Winconsistent-missing-destructor-override][] | | |
 |           |                           |           | [-Winconsistent-missing-override][]| | |
 |           | -Wdangling-else           |           | [-Wdangling-else][]                | | |
+|           |                           |           | [-Wdangling-gsl][]                 | | |
 |           |                           |           | [-Wmissing-braces][]               | | |
 | -         | -Wmissing-noreturn        | -         | [-Wmissing-noreturn][]             | | |
 |           | -Wconversion-null         |           | [-Wnull-conversion][]              | | |
@@ -147,6 +148,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 [-Wcovered-switch-default]:https://wandbox.org/permlink/5IR1twPO6UFoUU2E
 [-Wconversion]:https://wandbox.org/permlink/pl2CyQXzdcUzrkBy
 [-Wdangling-else]:https://wandbox.org/permlink/GroeDOmm6CQWjxVV
+[-Wdangling-gsl]:https://wandbox.org/permlink/ElaEUdxRRiEObfKp
 [-Wdelete-incomplete]:https://wandbox.org/permlink/K6r1Yfsu7n9bfGCk
 [-Wdeprecated-comma-subscript]:https://wandbox.org/permlink/mmD72OEmb9GsIEU1
 [-Wdeprecated-declarations]:https://wandbox.org/permlink/dBNHrMNwieFpDru9
