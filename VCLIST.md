@@ -2,6 +2,13 @@
 
 c++ warning correspondence table (Clang/GCC and Visual Studio)
 
+ * [C4000-C4199](#vs-c4000-c4199)
+ * [C4200-C4399](#vs-c4200-c4399)
+ * [C4400-C4599](#vs-c4400-c4599)
+ * [C4600-C4799](#vs-c4600-c4799)
+ * [C4800-C4199](#vs-c4800-C5999)
+ * [no VS](#no-vs)
+
 ## VS C4000-C4199
 
 |Summary|Visual Studio|GCC|Clang|Clang message|is Same|
