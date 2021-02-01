@@ -805,6 +805,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 ||-|-|[-Winconsistent-missing-override](https://wandbox.org/permlink/098vW5kNxd6AuF5f)|'_NAME_' overrides a member function but is not marked 'override'||
 ||-|-|[-Winconsistent-missing-destructor-override](https://wandbox.org/permlink/E3uyAwlJUPujbmv0)|'_NAME_' overrides a destructor but is not marked 'override'||
 ||-|-|[-Wmissing-braces](https://wandbox.org/permlink/eHiKH65WfwXnPdU7)|suggest braces around initialization of subobject|
+||-|-|[-Wnull-arithmetic](https://wandbox.org/permlink/PmaE8mWbUqt8bO73)|comparison between NULL and non-pointer ('nullptr_t' and NULL)|
 ||-|-Wmissing-noreturn([-Wsuggest-attribute=noreturn](https://wandbox.org/permlink/34UHOrtmkMPIDLy1))|[-Wmissing-noreturn](https://wandbox.org/permlink/1bOIJJ08Dl46CTWM)|function '_NAME_' could be declared with attribute 'noreturn'|
 ||-|-Wshadow|[-Wshadow-field-in-constructor](https://wandbox.org/permlink/YYPYkrokYuX3vFsH)|constructor parameter '_VAR_' shadows the field '_VAR_' of '_CLASS_'||
 ||[-Wshadow-compatible-local](https://wandbox.org/permlink/005yRoQb2vOs5I7N)|[-Wshadow-uncaptured-local](https://wandbox.org/permlink/gL3312D14GJsvxWW)|declaration shadows a local variable|

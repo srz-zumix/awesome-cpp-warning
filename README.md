@@ -125,6 +125,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |           |                           |           | [-Wdangling-gsl][]                 | | |
 |           |                           |           | [-Wmissing-braces][]               | | |
 | -         | -Wmissing-noreturn        | -         | [-Wmissing-noreturn][]             | | |
+|           |                           | -         | [-Wnull-arithmetic][]              | | |
 |           | -Wconversion-null         |           | [-Wnull-conversion][]              | | |
 |           |                           |           | [-Wparentheses-equality][]         | | |
 | -         | [-Wsuggest-attribute=noreturn][] |    | ([-Wmissing-noreturn][])           | | |
@@ -190,6 +191,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 [-Wmultichar]:https://wandbox.org/permlink/zFGKNIXEuswp8qrR
 [-Wnarrowing]:https://wandbox.org/permlink/38PevVKq6JDJbGEh
 [-Wnon-virtual-dtor]:https://wandbox.org/permlink/KeW1Px6KLH9WB9bz
+[-Wnull-arithmetic]:https://wandbox.org/permlink/PmaE8mWbUqt8bO73
 [-Wnull-conversion]:https://wandbox.org/permlink/ABZSxzM9XR0r1a4B
 [-Wold-style-cast]:https://wandbox.org/permlink/s8vAGt63s0XVZbzq
 [-Woverflow]:https://wandbox.org/permlink/jXOSXzTg16ZeVG8T
