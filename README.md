@@ -131,11 +131,13 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |           |                           | -         | [-Wsuggest-destructor-override][]  | | |
 | -         | -Wsuggest-override        | -         | [-Wsuggest-override][]             | | |
 |           |                           | -         | [-Wzero-as-null-pointer-constant][]| | |
+|           | error                     | -         | [-Wambiguous-reversed-operator][]  | | |
 
 
 [-Wabsolute-value]:https://wandbox.org/permlink/wd0wbHes8nqkNsTQ
 [-Wabstract-final-class]:https://wandbox.org/permlink/r7k7wieaf2d9qbdJ
 [-Waddress]:https://wandbox.org/permlink/MQnCpnpN1HPmr7lz
+[-Wambiguous-reversed-operator]:https://wandbox.org/permlink/2iTKIsbmgFA0Wf7v
 [-Wbitfield-constant-conversion]:https://wandbox.org/permlink/K3a0oFD1KHuA6B5n
 [-Wbuiltin-macro-redefined]:https://wandbox.org/permlink/fP8RAUGwYj4qsPfO
 [-Wc++11-narrowing]:https://wandbox.org/permlink/GCuBpZyoVaCLGYeU

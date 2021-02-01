@@ -793,6 +793,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |Summary|Visual Studio|GCC|Clang|Clang message|is Same|
 |:---|:--:|:--:|:--:|:--|:--|
 ||-|-|[-Wabsolute-value](https://wandbox.org/permlink/wd0wbHes8nqkNsTQ)|taking the absolute value of unsigned type 'unsigned char' has no effect||
+||-|-|[-Wambiguous-reversed-operator](https://wandbox.org/permlink/2iTKIsbmgFA0Wf7v)|ISO C++20 considers use of overloaded operator '==' (with operand types '_TYPE_' and '_TYPE_') to be ambiguous despite there being a unique best viable function||
 ||-|-|[-Wcovered-switch-default](https://wandbox.org/permlink/5IR1twPO6UFoUU2E)|default label in switch which covers all enumeration values||
 |int x = NULL;|-|[-Wconversion-null](https://wandbox.org/permlink/CKYlII9m0sW7PpOv)|[-Wnull-conversion](https://wandbox.org/permlink/ABZSxzM9XR0r1a4B)|implicit conversion of NULL constant to '_TYPE_'|
 |if .. else ..|-|[-Wdangling-else](https://wandbox.org/permlink/2dYFvxgWxBJSRdwN)|[-Wdangling-else](https://wandbox.org/permlink/GroeDOmm6CQWjxVV)|add explicit braces to avoid dangling else|
