@@ -113,6 +113,7 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |           |                           | -         | [-Wimplicit-int-float-conversion]  | /Wall | C5219 |
 |           |                           |           | [-Wabsolute-value][]               | | |
 |           |                           |           | [-Wabstract-final-class][]         | | |
+|           | error                     | -         | [-Wambiguous-reversed-operator][]  | | |
 |           |                           | -         | [-Wcovered-switch-default][]       | | |
 | -         | -Wdouble-promotion        | -         | [-Wdouble-promotion][]             | | |
 |           |                           | -         | [-Wexit-time-destructors][]        | | |
@@ -131,7 +132,6 @@ c++ warning correspondence table (Clang/GCC and Visual Studio)
 |           |                           | -         | [-Wsuggest-destructor-override][]  | | |
 | -         | -Wsuggest-override        | -         | [-Wsuggest-override][]             | | |
 |           |                           | -         | [-Wzero-as-null-pointer-constant][]| | |
-|           | error                     | -         | [-Wambiguous-reversed-operator][]  | | |
 
 
 [-Wabsolute-value]:https://wandbox.org/permlink/wd0wbHes8nqkNsTQ
